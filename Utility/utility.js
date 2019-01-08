@@ -130,7 +130,6 @@ var n=readline.question("enter nth number")
 },
 coupun(c)
 {
-    //console.log("hai hahba");
     var array=[];
     for(var i=0;i<c;i++)
     {
@@ -146,4 +145,125 @@ coupun(c)
     }
     return array;
 },
+Distance(Distance)
+{
+    
+    var a=readline.question(" enter the value of a ");
+    var b=readline.question(" enter the value of b ");
+      
+        var Distance =Math.sqrt(((Math.pow(a, 2))+(Math.pow(b, 2))));
+        
+		console.log("distance between  point"+a+"and"+b+ "and origin is" +Distance );
+		
+
+},
+Prime(n)
+{
+    var n=readline.question("enter the n value");
+    for(var i=1;i<=n;i++)
+    {
+            var count=0;
+        for(var j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                count++;
+            }
+        }
+        if(count==2)
+        {
+            while(n%i==0)
+            {
+                console.log(i);
+            n=n/i;
+            
+            }
+         }
+
+
+  }
+},
+quad(a,b,c)
+{
+    var a   =readline.question("enter the value of a");
+
+    var b  =readline.question("enter the value of b");
+    var c  =readline.question("enter the value of c");
+    var d  = Math.sqrt(b*b-4*a*c);
+    var denom=2*a;
+    var r1 = (-b+d)/denom;
+    var r2 = (-b-d)/denom;
+    console.log(" first root of equation is "+ r1);
+    console.log(" second root of equation is "+ r2);
+},
+Triplet(arr)
+{
+    for(var i=0;i<arr.length-2;i++)
+    for(var j=i+1;j<arr.length-1;j++)
+    for(var k=j+1;k<arr.length;k++)
+    if(arr[i]+arr[j]+arr[k]==0)
+    {
+     console.log("sum of three numbers "+arr[i]+" "+arr[j]+" " +arr[k])
+    }
+
+},
+Arrayinput(arr)
+{
+var num=readline.question("enter the size");
+for(var i=0;i<num;i++)
+{
+    arr[i]=Number(readline.question(" "));
+}
+return arr;
+},
+Windchil(t,v)
+{
+
+   var t=readline.question("enter the value of t");
+   var v=readline.question("enter the value of v");
+
+   var w=35.74+0.6215+(0.4275*t-35.75)*Math.pow(v,0.16);
+   console.log("temparature is "+t);
+   console.log("windspeed is "+v);
+
+   console.log("windchill is "+w);
+
+  
+    
+},
+gettime()
+{
+    var date =new Date();
+    var n=date.getTime();
+    return n;
+},
+stopwatch (start,stop)
+{
+    
+  var time=stop-start;
+  var div =time/1000;
+  return div;
+ 
+},
+permut(b)
+{ 
+      var input=readline.question("string");
+    var outputstring;
+    if(b===0)
+    {
+        return b;
+    }
+    if(b===1)
+    {
+       return b;
+    }
+    else
+    {
+        for(var i=0;i<b.length;i++)
+        {
+
+        }
+    
+    }
+}
 }
