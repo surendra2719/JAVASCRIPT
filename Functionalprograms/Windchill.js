@@ -1,8 +1,8 @@
-const Utility=require('../Utility/utility');
-var read=require('readline-sync');
-function Windchil()
-{
+const Utility = require('../Utility/utility');
+var read = require('readline-sync');
+function Windchil() {
 
-Utility.Windchil();
+    Utility.Windchil();
+
 }
 Windchil();

@@ -265,5 +265,162 @@ permut(b)
         }
     
     }
+},
+permutation(string, str, first, last) {
+    if (first == last) {
+        console.log(str);
+        string = string + str;
+    }
+    else {
+        for (let index = first; index <= last; index++) {
+           
+            str = this.swapString(str, first, index);
+            
+            string = this.permutation(string, str, first + 1, last);
+            str = this.swapString(str, first, index);
+        }
+    }
+    return string;
+},
+swapString(str, first, last) {
+    var as = '';
+    
+    var ch = [];
+
+    ch = str.split('');
+    var temp = ch[first];
+    ch[first] = ch[last];
+    ch[last] = temp;
+    for (let index = 0; index < str.length; index++) {
+        as = as + ch[index];
+    }
+    return as;
+},
+twoDarry(r, c) {
+   
+    var array = [];
+    console.log("enter elements ");
+
+    for (let i = 0; i < r; i++) {
+        array.push([]);
+
+        for (let i2 = 0; i2 < c; i2++) {
+            array[i][i2] = readline.question('');
+        }
+    }
+    return array;
+},
+dayOfWeek(d, m, y)
+ {
+    var y0 = y - Math.floor((14 - m) / 12);
+    var x = y0 + Math.floor((y0 / 4)) - Math.floor((y0 / 100)) + Math.floor((y0 / 400));
+    m0 = m + 12 * Math.floor((14 - m) / 12) - 2;
+    var d0 = (d
+         + x + Math.floor((31 * m0) / 12)) % 7;
+    
+    return d0;
+    
+    
+},
+sort(string)
+{
+    var  character=string.split('')
+    for(var i=0;i<character.length;i++);
+    for(var j=i+1;j<character.length;j++);
+    {
+        var temp=character[i];
+        character[1]=character[2];
+        character[2]=temp;
+    }
+    
+},
+anagram(string1 , string2)
+
+
+{
+    if(string1.length!=string2.length)
+    return false;
+
+
+ var character=this.sort(string1);
+ var character1=this.sort(string2);
+ if(character==character1)
+ {
+     console.log("strings are anagram");
+ }
+ else
+ {
+    console.log("strings are not anagram");
+ }
+},
+prime(n)
+{  
+    var n = readline.question("enter n value");
+for(var i=1;i<n;i++)
+{
+    p=0;
+    for(var j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           p++; 
+           break;
+        }
+    }
+if(p==0)
+{
+    console.log(i+" ");
 }
 }
+
+},
+monthlypack( p,  y , r)
+{
+	var r0=r/(12*100);
+	var n=12*y;
+    var payment=p*r0/(1-Math.pow(1+r, -n));
+    var calculation = (p * r) / (1 - (payment))
+    console.log("The monthly payment " + calculation);
+},
+temparature(choice)
+{
+ 
+        if(choice==1)
+        {
+            var temparature = readline.question("enter temparature in celcius");
+            var converted=(9/5.0*(temparature)+32);
+            console.log("converted temparature in f"+converted)
+        } 
+        else if (choice==2)  
+        {
+            var temparature = readline.question("enter temparature in fahrenheit");
+            var converted=5/9.0*(temparature-32);
+            console.log("converted temparature in c"+converted)
+        }
+        else
+        {
+            console.log("entered input is wrong ")
+        }
+    },
+    squarenon(n)   
+    {
+        if(n>0)
+        {
+            var t=n;
+        var epsilon=1e-15;
+         while(Math.abs(t-n/t)>epsilon*t)
+         {
+             t=((n/t+t)/2);
+         }
+          console.log("square root of number is"+t);
+        
+        }
+        else{
+            console.log("num should be positive num");
+                }
+
+            }
+        }
+    
+
+ 
