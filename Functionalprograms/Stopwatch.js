@@ -1,3 +1,13 @@
+/*****************************************************************************************
+ *purpose   : Write a Stopwatch Program for measuring the time that elapses between the start and end clicks
+
+ * @file    :  Stopwatch.js
+ * @overview:   Print the elapsed time.
+
+
+ * @version : 1.0
+ * @since   : 04/01/2019 
+ ***************************************************************************/
 const Utility=require('../Utility/utility');
 var readline=require('readline-sync');
 function stopwatch()

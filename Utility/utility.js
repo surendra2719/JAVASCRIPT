@@ -187,7 +187,12 @@ module.exports = {
             sum = sum + 1 / i;
         }
         console.log("nth harmonic number is" + sum);
-    },
+    },/*
+    *@purpose :to find coupon from user input array elements
+    *@parameter   :array elememts ,varaible c
+    * @Description :Given N distinct Coupon Numbers, how many random numbers do you need to generate distinct coupon number? This program simulates this random process.
+
+    */
     coupun(c) {
         var array = [];
         for (var i = 0; i < c; i++)
@@ -741,7 +746,7 @@ module.exports = {
     },
     swaping() {
         // x- decimal value
-        var x = 70;
+        var x = 2;
         // formula to return binay value using bitwise operator
         return (Math.floor((x & 0x0F) << 4 | (x & 0xF0) >> 4));
 
@@ -753,11 +758,10 @@ module.exports = {
 
     * */
 
-    findnumber(left, right) 
-    {// calculating middle value 
+    findnumber(left, right) {// calculating middle value 
 
         var middle = Math.floor((right + left) / 2);
-           
+
         if (left < right) {
 
             if (left == right - 1) {
