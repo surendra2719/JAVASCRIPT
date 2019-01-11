@@ -17,11 +17,11 @@
  ******************************************************************************/
 const readline = require('readline-sync');
 
-    /*
-    *@purpose : To get user input value 
-    *@description : call this method whenever we want take input from user
-                    and return the value.
-    */
+/*
+*@purpose : To get user input value 
+*@description : call this method whenever we want take input from user
+                and return the value.
+*/
 module.exports = {
 
     /*
@@ -44,9 +44,9 @@ module.exports = {
 
     },
 
- /* Purpose : By using random function flip the coin no of times from user input
- *            and print the percentage of head vs tails
- */
+    /* Purpose : By using random function flip the coin no of times from user input
+    *            and print the percentage of head vs tails
+    */
 
     /*
      * Description : Declaring a function and passing the userinput for fliping the coin
@@ -77,10 +77,10 @@ module.exports = {
         console.log(heads);
         console.log(tails);
     },
-      /* 
-     * purpose : By taking power values as input and display the given power value 
-     *            is a leapyear or not , the given power value doesnt exceed 31
-     */
+    /* 
+   * purpose : By taking power values as input and display the given power value 
+   *            is a leapyear or not , the given power value doesnt exceed 31
+   */
 
     /*
      * Description : Declaring a function and giving power value N as argument  
@@ -100,11 +100,11 @@ module.exports = {
 
         }
     },
-     /*
-    *@purpose : generate the power of two values 
-    *@param   : user input value
-    *@description : it prints the two's power value 
-    * */
+    /*
+   *@purpose : generate the power of two values 
+   *@param   : user input value
+   *@description : it prints the two's power value 
+   * */
     power(p) {
         var p = readline.question("enter the power");
         if (p == 0) {
@@ -114,12 +114,12 @@ module.exports = {
             console.log(Math.pow(2, i));
         }
     },
-     /*GAMBLER*/
+    /*GAMBLER*/
     /*
     * @purpose : is to calculate the total number of wins and percentage of wins and loss
-    * @parameter   : stack- amount that player have 
+
     * @parameter   : goal - amount that player want to win 
-    * @parameter   : totaltime -no of times he wants to play 
+    *
     * @description : the game continue upto, if player reached his goal,
     *               or he lost all his money or he lost his total number of times he want play.
     */
@@ -132,14 +132,14 @@ module.exports = {
         var loose = 0;
         var toss = 0;
         var amount = 0;
-  //loop upto win and lost his all stack and upto total number of times he wants play 
+        //loop upto win and lost his all stack and upto total number of times he wants play 
         while (amount < goal) {
             toss++;
             var b = readline.question("Enter your betting number 1 to 6");
 
 
             readline.question("press any key to toss ");
-           // genearate the random number to check weather he wins or lost
+            // genearate the random number to check weather he wins or lost
             var r = Math.floor(Math.random() * 6 + 1);
             if (b == r) {
                 win++;
@@ -156,7 +156,7 @@ module.exports = {
             }
 
         }
-          // calculating the total percentage 
+        // calculating the total percentage 
         var pw = (win * 100) / toss;
         var pl = (loose * 100 / toss);
 
@@ -173,12 +173,12 @@ module.exports = {
 
 
     },
-     /* 
-     * @purpose : To genarate harmonic numbers according to the userinput
-     *@param    : input from user
-     * @description : To generate the sum of harmonic numbers by taking input from user
-     * @function : Harmonic function takes user input and sum it no of times that user given
-     */
+    /* 
+    * @purpose : To genarate harmonic numbers according to the userinput
+    *@param    : input from user
+    * @description : To generate the sum of harmonic numbers by taking input from user
+    * @function : Harmonic function takes user input and sum it no of times that user given
+    */
     Harmonic(n) {
         var n = readline.question("enter nth number")
         var sum = 0;
@@ -190,8 +190,8 @@ module.exports = {
     },
     coupun(c) {
         var array = [];
-        for (var i = 0; i < c; i++) 
-         // genearate the random number
+        for (var i = 0; i < c; i++)
+        // genearate the random number
         {
             array[i] = Math.floor(Math.random() * 9 + 1);
             for (var j = 0; j < i; j++) {
@@ -205,8 +205,8 @@ module.exports = {
     },
     /*
 *@purpose : to calculate the distance between two point.
-*@parameter   : n1-first distance 
-*@parameter   : n2 -Second distance 
+*@parameter   : a-first distance 
+*@parameter   : b -Second distance 
 *@description : use distance formula and calculate the result 
 */
     Distance(Distance) {
@@ -220,9 +220,9 @@ module.exports = {
 
 
     },
-     /* 
-   * @purpose : To genarate primeFactor numbers according to the userinput
-   */
+    /* 
+  * @purpose : To genarate primeFactor numbers according to the userinput
+  */
 
     /* @description : Finding the primefactors of a given number */
     Prime(n) {
@@ -234,7 +234,7 @@ module.exports = {
                     count++;
                 }
             }
-            
+
             if (count == 2) {
                 while (n % i == 0) {
                     console.log(i);
@@ -258,7 +258,7 @@ module.exports = {
 
         var b = readline.question("enter the value of b");
         var c = readline.question("enter the value of c");
-         // calculate the d(variable) value
+        // calculate the d(variable) value
         var d = Math.sqrt(b * b - 4 * a * c);
         //check d value 
         var denom = 2 * a;
@@ -266,7 +266,7 @@ module.exports = {
 
         var r1 = (-b + d) / denom;
         var r2 = (-b - d) / denom;
-           // roots are real and unequal
+        // roots are real and unequal
         console.log(" first root of equation is " + r1);
         console.log(" second root of equation is " + r2);
     }, /*
@@ -276,7 +276,7 @@ module.exports = {
     *prints the total triplets formed and also no of triplets 
     */
     Triplet(arr) {
-        
+
         for (var i = 0; i < arr.length - 2; i++)
             for (var j = i + 1; j < arr.length - 1; j++)
                 for (var k = j + 1; k < arr.length; k++)
@@ -300,12 +300,12 @@ module.exports = {
         return array;
     },
 
-/*
-    *@Purpose : To generate the Arraystring 
-    *@Description : this method is used to generate the array of user choice elements
-                    and return the resultant array
-    *@Parameter : empty arraystring
-    */
+    /*
+        *@Purpose : To generate the Arraystring 
+        *@Description : this method is used to generate the array of user choice elements
+                        and return the resultant array
+        *@Parameter : empty arraystring
+        */
     ArrayinputStr(array) {
         var num = readline.question("enter the size");
         for (var i = 0; i < num; i++) {
@@ -321,13 +321,13 @@ module.exports = {
     *   and for the volume range, and prints the results
     * */
 
-//cheking condition for the required range 
+    //cheking condition for the required range 
 
     Windchil(t, v) {
 
         var t = readline.question("enter the value of t");
         var v = readline.question("enter the value of v");
- //Formula for the Windchill calculation 
+        //Formula for the Windchill calculation 
         var w = 35.74 + 0.6215 + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
         console.log("temparature is " + t);
         console.log("windspeed is " + v);
@@ -389,25 +389,25 @@ module.exports = {
         }
         else {
             for (let index = first; index <= last; index++) {
-//call swapstring method swap the characters 
+                //call swapstring method swap the characters 
                 str = this.swapString(str, first, index);
 
                 string = this.permutation(string, str, first + 1, last);
-                  // recursion method 
+                // recursion method 
                 str = this.swapString(str, first, index);
 
             }
         }
         return string;
     },
-     // swap method for swaping the string character
+    // swap method for swaping the string character
     swapString(str, first, last) {
         var as = '';
- //empty array
+        //empty array
         var ch = [];
-  //split string into the character
+        //split string into the character
         ch = str.split('');
-         // temporary variable
+        // temporary variable
         var temp = ch[first];
         ch[first] = ch[last];
         ch[last] = temp;
@@ -416,13 +416,13 @@ module.exports = {
         }
         return as;
     },
-     /*
-        *@purpose :to print Two Dimensional Array,from user input elements 
-        *@parameter   : row-number of rows 
-                    column-number of columns
-        *@Description :ask user to enter total number of column and row
-        *convert into two Dimenstional array format and prints 
-        */
+    /*
+       *@purpose :to print Two Dimensional Array,from user input elements 
+       *@parameter   : row-number of rows 
+                   column-number of columns
+       *@Description :ask user to enter total number of column and row
+       *convert into two Dimenstional array format and prints 
+       */
     twoDarry(r, c) {
 
         var array = [];
@@ -431,7 +431,7 @@ module.exports = {
 
         for (let i = 0; i < r; i++) {
             array.push([]);
-// adding elements by elements in generated array
+            // adding elements by elements in generated array
             for (let i2 = 0; i2 < c; i2++) {
                 array[i][i2] = readline.question('');
             }
@@ -446,13 +446,12 @@ module.exports = {
     *           year- take year from command line of user choice
     *@Description : use formula and calculate the day 
     */
-    dayOfWeek(d, m, y) 
-    {   //Formulas for caluclating dayofWeek
+    dayOfWeek(d, m, y) {   //Formulas for caluclating dayofWeek
         var y0 = y - Math.floor((14 - m) / 12);
         var x = y0 + Math.floor((y0 / 4)) - Math.floor((y0 / 100)) + Math.floor((y0 / 400));
         m0 = m + 12 * Math.floor((14 - m) / 12) - 2;
-        var d0 = (d+ x + Math.floor((31 * m0) / 12)) % 7;
-console.log(d0)
+        var d0 = (d + x + Math.floor((31 * m0) / 12)) % 7;
+        console.log(d0)
         return d0;
 
 
@@ -469,13 +468,12 @@ console.log(d0)
 
     },/*
     *@Purpose : check the two strings are same or not
-    *@Parameter   : str-first string of user input 
-    *           str1-second string of user input 
+    *@Parameter   : str1-first string of user input 
+    *           str2-second string of user input 
     *@Description : take two string from user and compare those, and prints the message 
                    wheather they are anagram or not.
     */
-    anagram(string1, string2) 
-    {//checking the length of the both string 
+    anagram(string1, string2) {//checking the length of the both string 
         if (string1.length != string2.length)
             return false;
 
@@ -489,7 +487,14 @@ console.log(d0)
         else {
             console.log("strings are not anagram");
         }
-    },
+    }, /*
+    *@Purpose :Take a range of 0 - 1000 Numbers and find the Prime numbers in that range. 
+
+    *@Parameter : n user input value
+    *@Description :take value from the user and calculate the  prime number 
+    *and prints the result.
+    */
+
     prime(n) {
         var n = readline.question("enter n value");
         for (var i = 1; i < n; i++) {
@@ -513,8 +518,7 @@ console.log(d0)
     *@Description : take command line input of principle and year and rate 
     *and find the monthly payment 
     */
-    monthlypack(p, y, r)
-     {        //formula to calculate the result
+    monthlypack(p, y, r) {        //formula to calculate the result
         var r0 = r / (12 * 100);
         var n = 12 * y;
         var payment = p * r0 / (1 - Math.pow(1 + r, -n));
@@ -547,7 +551,7 @@ console.log(d0)
     },
     /*
     *@Purpose :to find square root for non negative number by using the newton method 
-    *@Parameter : num-user input value
+    *@Parameter : n user input value
     *@Description :take value from the user and calculate the square of that number 
     *and prints the result.
     */
@@ -614,20 +618,20 @@ console.log(d0)
         var low = 0;
         var high = arrrray.length - 1;
         while (low <= high) {
-// calculate middle value 
+            // calculate middle value 
             middle = Math.floor((low + high) / 2);
-    // check middle with element           
+            // check middle with element           
             if (element === array[middle]) {
                 return middle;
             }
-            else if (element < array[middle]) { 
-    //assign decremented middle to high 
+            else if (element < array[middle]) {
+                //assign decremented middle to high 
                 high = middle - 1;
 
             }
             else if (element > array[middle]) {
                 low = middle + 1;
-                 //assign inremented middle to low
+                //assign inremented middle to low
             }
             else {
                 return middle;
@@ -649,17 +653,17 @@ console.log(d0)
         while (low <= high) {
             // calculate middle value 
             middle = Math.floor((low + high) / 2);
- // check middle with element
+            // check middle with element
 
             if (element == array[middle]) {
                 return middle;
             }
             else if (element < array[middle]) {
-      //assign decremented middle to high 
+                //assign decremented middle to high 
                 high = middle - 1;
             }
             else if (element > array[middle]) {
-                  //assign inremented middle to low
+                //assign inremented middle to low
                 low = middle + 1;
             }
             else {
@@ -677,13 +681,15 @@ console.log(d0)
     Insertionsort(array) {
 
         for (var i = 1; i < array.length; i++) {
+            //temp varaible
             var temp = array[i];
             var j = i;
-            while (j > 0 &&  temp<array[j - 1]) {
+            while (j > 0 && temp < array[j - 1]) {
                 array[j] = array[j - 1];
                 j = j - 1;
             }
             array[j] = temp;
+            // after sorting it will assign temp varaible to array
         }
         return array;
 
@@ -694,7 +700,7 @@ console.log(d0)
     * */
 
     BubbleSort(array) {
- // compare first and next elements in array and arrange 
+        // compare first and next elements in array and arrange 
         for (let i = 0; i < array.length; i++) {
             for (let j = i + 1; j < array.length; j++) {
 
@@ -713,30 +719,72 @@ console.log(d0)
     *@Parameter   : num-user input number 
     *@Description : take number from user input and check its palindrome or not 
     * */
-    palindrome(number)
-    {
-        var temp=number;
-        
-        var rem=0;
-         //loop untill num is not equal to zero
-        while(number!=0)
-        {
-            var r=number%10;
-                        //take reminder of the number 
-         rem=rem*10+r;
-         //keep on adding element 
-        number=Math.floor(number/10);
-         //devide the number to get next digit of given number  
+    palindrome(number) {
+        var temp = number;
+
+        var rem = 0;
+        //loop untill num is not equal to zero
+        while (number != 0) {
+            var r = number % 10;
+            //take reminder of the number 
+            rem = rem * 10 + r;
+            //keep on adding element 
+            number = Math.floor(number / 10);
+            //devide the number to get next digit of given number  
         }// check both number are equal and return result
-        if(rem==temp)
-        {
-            console.log(" it is pallindrome number  "+temp);
+        if (rem == temp) {
+            console.log(" it is pallindrome number  " + temp);
         }
-        else
-        {
+        else {
             console.log(" it is not pallindrome number");
         }
-        },
-       
+    },
+    swaping() {
+        // x- decimal value
+        var x = 70;
+        // formula to return binay value using bitwise operator
+        return (Math.floor((x & 0x0F) << 4 | (x & 0xF0) >> 4));
+
+    },/*
+    *@Purpose : check the Number N and then recursively ask true/false if the number is between a high and low value
+
+    *@Parameter   : left,right
+    *@Description : takes a command-line argument N, asks you to think of a number between 0 and N-1, where N = 2^n, and always guesses the answer with n questions.
+
+    * */
+
+    findnumber(left, right) 
+    {// calculating middle value 
+
+        var middle = Math.floor((right + left) / 2);
+           
+        if (left < right) {
+
+            if (left == right - 1) {
+
+                var num = readline.question("your number is " + left);
+
+                if (num == "y") {
+                    return left;
+                }
+
+                if (num == "n") {
+                    return right;
+                }
+
+            }
+            // number varaible is defing that you number is in range between
+            var number = readline.question("your number is in the range of " + middle + " to " + right + " ");
+            // loop contains if your number is in between it will assigned to middle  else it will goes to else loop
+            if (number == "y") {
+                middle = this.findnumber(middle + 1, right);
+            }
+            else if (number == "n") {
+                middle = this.findnumber(left, middle - 1);
+            }
+        }
+        return middle;
+    }
+
 }
 
