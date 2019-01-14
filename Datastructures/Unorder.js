@@ -5,12 +5,12 @@ var Util = require('../Datastructures/Util');
 
 function unorderlist() {
     var string = filestream.readFileSync('unorder.txt', 'utf8');
-    var a = string.split(' ');
+    var array = string.split(' ');
 
     var unorder = new access.linkedlist;
-    for (let i = 0; i < a.length; i++)
+    for (let i = 0; i < array.length; i++)
      {
-        unorder.add(a[i]);
+        unorder.add(array[i]);
     }
     unorder.show();
 
@@ -32,8 +32,8 @@ function unorderlist() {
     }
 
    
-    var s = unorder.getData();
-    Util.writeFile('unorder.txt', s);
+    var string = unorder.getData();
+    Util.writeFile('unorder.txt', string);
     console.log("Linked list elements are ");
     unorder.show();
 }
