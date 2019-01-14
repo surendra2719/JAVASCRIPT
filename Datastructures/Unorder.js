@@ -4,7 +4,7 @@ var readline = require('readline-sync');
 var Util = require('../Datastructures/Util');
 
 function unorderlist() {
-    var string = filestream.readFileSync('unorder.txt', 'utf8');
+    var string = filestream.readFileSync('text.txt', 'utf8');
     var array = string.split(' ');
 
     var unorder = new access.linkedlist;
@@ -15,7 +15,8 @@ function unorderlist() {
     unorder.show();
 
     var answer = readline.question("Enter the word  you want to search  ");
-    if (!isNaN(answer)) {
+    if (!isNaN(answer))
+     {
         console.log("input should be in string form ");
         return;
     }
@@ -33,7 +34,7 @@ function unorderlist() {
 
    
     var string = unorder.getData();
-    Util.writeFile('unorder.txt', string);
+    Util.writeFile('text.txt', string);
     console.log("Linked list elements are ");
     unorder.show();
 }
