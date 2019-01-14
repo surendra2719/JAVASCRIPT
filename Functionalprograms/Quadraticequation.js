@@ -4,7 +4,7 @@
  * @file    :  Qudraticequation.js
  * @overview:  Since the equation is x*x, hence there are 2 roots. The 2 roots of the equation can be found using a formula 
 
-
+ * @author  : surendra 
 
  * @version : 1.0
  * @since   : 04/01/2019 

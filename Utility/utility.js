@@ -6,7 +6,7 @@
  *  Purpose         : TO deploy all the busness logic.
  * 
  *  @description    
- * 
+ *  
  *  @file           : Utility.js
  *  @overview       : ALl the business logic bus be here.
  *  @module         : read-line modules are installed
@@ -781,7 +781,7 @@ module.exports = {
             var number = readline.question("your number is in the range of " + middle + " to " + right + " ");
             // loop contains if your number is in between it will assigned to middle  else it will goes to else loop
             if (number == "y") {
-                middle = this.findnumber(middle + 1, right);
+                middle = this.findnumber(middle , right);
             }
             else if (number == "n") {
                 middle = this.findnumber(left, middle - 1);

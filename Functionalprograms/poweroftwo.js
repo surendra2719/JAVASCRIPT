@@ -5,7 +5,7 @@
  * @file    :  Poweroftwo.js
  * @overview:  Prints the Nth harmonic number: 1/1 + 1/2 + ... + 1/N .
 
-
+ * @author  : surendra 
 
  * @version : 1.0
  * @since   : 04/01/2019 

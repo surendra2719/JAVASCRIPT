@@ -3,7 +3,7 @@
 
  * @file    :  Primefactorization.js
  * @overview:  computes the prime factorization of N using brute force.
-
+ * @author  : surendra 
 
 
  * @version : 1.0

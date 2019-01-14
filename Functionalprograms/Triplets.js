@@ -4,7 +4,7 @@
  * @file    :  Triplets.js
  * @overview:   A program with cubic running time. Read in N integers and counts the   number of triples that sum to exactly 0.
 
-
+ * @author  : surendra 
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/

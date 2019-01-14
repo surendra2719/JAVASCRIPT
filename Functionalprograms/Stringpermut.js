@@ -3,7 +3,7 @@
  * @file    :  Stringpermut.js
  * @overview:   Check if the arrays returned by two string functions are equal. 
 
-
+ * @author  : surendra 
 
  * @version : 1.0
  * @since   : 04/01/2019 

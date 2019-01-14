@@ -3,7 +3,7 @@
 
  * @file    :  Stopwatch.js
  * @overview:   Print the elapsed time.
-
+ * @author  : surendra 
 
  * @version : 1.0
  * @since   : 04/01/2019 
