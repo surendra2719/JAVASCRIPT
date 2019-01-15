@@ -1,13 +1,12 @@
 
-var Utility=require('../Datastructures/Stackelinkedlist');
-var stackaccess=require('../Datastructures/Stackelinkedlist');
+
+var stackaccess=require('../Datastructures/Stack');
 var readline=require('readline-sync');
 
 function Stack()
 {
     var st= new stackaccess.Stack;
-    // var answer=Utility.callFile();
-    // var str=answer[0];
+  
     var str=readline.question("Enter your mathematical expression with parantheses ");
    var ch,i;
    
@@ -40,7 +39,7 @@ function Stack()
 
 
    }
-   if(st.getsize()==0){
+   if(st. getSize()==0){
    return true;
    }
    return false;
