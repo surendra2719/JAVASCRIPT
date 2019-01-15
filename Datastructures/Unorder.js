@@ -1,4 +1,4 @@
-var access = require('../Datastructures/linkedlist');
+var access = require('./unorderlinkedlist');
 var filestream = require('fs');
 var readline = require('readline-sync');
 var Util = require('../Datastructures/Util');
@@ -14,7 +14,7 @@ function unorderlist() {
     }
     unorder.show();
 
-    var answer = readline.question("Enter the word  you want to search  ");
+    var answer = readline.question("Enter the word  you want to search  :\n");
     if (!isNaN(answer))
      {
         console.log("input should be in string form ");
