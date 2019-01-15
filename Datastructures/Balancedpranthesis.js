@@ -10,27 +10,38 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var stackaccess=require('../Datastructures/Stack');
+var stackaccess=require('./stack');
 // accessing  a stack class through require keyword 
+
+
 var readline=require('readline-sync');
 // accessing  a  readline through require keyword 
-function Stack()
+
+function stackmethod()
 // it is function to calling stack
 {
     var stack= new stackaccess.Stack;
     // accessing a stack 
   
+
     var string=readline.question("Enter your mathematical expression with parantheses ");
     // giving an input by user
+
+
    var character,i;
+
    // declaring  varaibles 
    
+
+
    for(i=0;i<string.length;i++)
    // for given expression it will itirated by for loop
    {
+
         character=string.charAt(i);
     // checking the characters giving paranthesis through if loop
        if(character=='(' || character=='[' || character=='{')
+
 
 
        {
@@ -40,28 +51,37 @@ function Stack()
        }
 
        else
+
+
+
        {
            // using switch break condition for different paranthesis
            switch (character)
            {
-               case ')' : if(string.pop()!='('){
+               case ')' : if(string.pop()!='(')
+                            {
                                 return false;
                             }
                             break;
                case ']' : if(string.pop()!='[')
-               {
+                             {
                    return false;
-               }
+                             }
                break;
                case '}' : if(string.pop()!='{')
-               {
+                            {
                    return false;
-               }break;
+                            }
+               break;
            }
        }
 
 
    }
+
+
+
+   
     // checking hte size of that string
    if(stack. getSize()==0) 
    {
@@ -69,8 +89,11 @@ function Stack()
    }
    return false;
 }
+
+
+
 // verifying boolean condition with stack 
-var bol=Stack();
+var bol=stackmethod();
 
 
 if(bol)
