@@ -462,7 +462,7 @@ module.exports = {
 
     },
     sort(string) {
-        var character = string.split('')
+        var character = string.split(' ');
         for (var i = 0; i < character.length; i++);
         for (var j = i + 1; j < character.length; j++);
         {
