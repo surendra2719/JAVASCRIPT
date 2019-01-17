@@ -37,18 +37,16 @@ class Stack {
 
 
  // methods contains pushing an elements to stack
-    push(element) 
-    {
+ push(element) {
 
-        if (this.top == this.capacity - 1)
-         {
-            console.log("Stack Overflow");
-            return;
-        }
-        this.size++;
-        this.stack[++this.top] = element;
-
+    if (this.top == this.capacity - 1) {
+        console.log("Stack Overflow");
+        return;
     }
+    
+    this.stk[++this.top] = element;
+    this.size++;
+}
 
 
  // methods contains poping an elements to stack
@@ -132,7 +130,7 @@ class Stack {
     reveseStack(stack) 
     {
         var newstack = new Stack;
-        var n = this.getsize();
+        var n = this.getSize();
         for (let index = 0; index < n; index++) 
         {
             new stack.push(this.pop());

@@ -788,7 +788,94 @@ module.exports = {
             }
         }
         return middle;
-    }
+    },
 
+    intializeGame() {
+        var game = [];
+        for (let i = 0; i <= 2; i++) {
+            game.push([]);
+            for (let j = 0; j <= 2; j++)
+                game[i][j] = '-';
+        }
+        return game;
+    },
+
+    random() {
+        var value = Math.floor(Math.random() * 3);
+        console.log(value+1);
+        return value;
+    },
+    // it will print empty  after playinig the game user and computer
+    mark(game, x, y, value) {
+        if (game[x][y] == '-')
+            game[x][y] = value;
+        for (let i = 0; i <= 2; i++) {
+            var print = [];
+            for (let j = 0; j <= 2; j++)
+                print[j] = game[i][j];
+            console.log(print);
+        }
+        return game;
+    }
+    ,
+    // it will generate random number purpose for computer playing
+    computerPlayer(game) {
+        var arr;
+        var flag = false;
+        while (flag == false) {
+            var x = this.random();
+            var y = this.random();
+            if (game[x][y] == '-') {
+                arr = this.mark(game, x, y, 'O');
+                flag = true;
+            }
+        }
+        return game;
+    }
+    ,
+    // method for user input for game
+    userPlayer(game) {
+        var flag = false;
+        while (flag == false) {
+            console.log("Enter the row value:");
+            let x = readline.questionInt('Enter the value of x within 1,2,3')-1;
+            let y = readline.questionInt('Enter the value of y within 1,2,3')-1;
+            if (game[x][y] == '-') {
+                this.mark(game, x, y, 'X');
+                flag = true;
+            }
+            else
+                console.log("Please enter the correct choice");
+        }
+        return game;
+    }
+    ,
+    // it will print input by user like vertical and horizontal
+    check(game) {
+        for (let i = 0; i <= 2; i++) {
+            if (game[i][0] == game[i][1] && game[i][1] == game[i][2]) {
+                if (game[i][0] == 'O' || game[i][0] == 'X') {
+                    return true;
+                }
+            }
+            if (game[0][i] == game[1][i] && game[1][i] == game[2][i]) {
+                if (game[0][i] == 'O' || game[0][i] == 'X') {
+                    return true;
+                }
+            }
+        }
+        var k = 0, l = 0;
+        if (game[k][k] == game[k + 1][k + 1] && game[k + 1][k + 1] == game[k + 2][k + 2]) {
+            if (game[0][0] == 'O' || game[0][0] == 'X') {
+                return true;
+            }
+        }
+        if (game[l][l + 2] == game[l + 1][l + 1] && game[l + 1][l + 1] == game[l + 2][l]) {
+            if (game[0][0] == 'O' || game[0][0] == 'X') {
+                return true;
+            }
+        }
+        return false;
+    },
 }
 
