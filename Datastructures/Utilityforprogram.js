@@ -1,3 +1,16 @@
+
+/*****************************************************************************************
+ *purpose   : Acessing the  methods for   program
+
+ 
+ * @file    : Utilityforprogram .js
+ * @overview: By this class it will provinding methods
+
+ * @version : 1.0
+ * @since   : 04/01/2019 
+ ***************************************************************************/
+
+
 var readline = require('readline-sync');
 
 module.exports = {
@@ -12,7 +25,9 @@ module.exports = {
                 return false;
             }
         },
-        dayOfWeek(day, month, year) {
+        dayOfWeek(day, month, year)
+         {
+             // formula 
             var y0 = year - Math.floor((14 - month) / 12);
             var x = y0 + Math.floor((y0 / 4)) - Math.floor((y0 / 100)) + Math.floor((y0 / 400));
             m0 = month + 12 * Math.floor((14 - month) / 12) - 2;
@@ -22,18 +37,28 @@ module.exports = {
             
             
         },
-        isPrime(number) {
-            if (number == 0 || number == 1) {
+        // prime method for checking number is prime or not 
+        isPrime(number)
+         {
+            if (number == 0 || number == 1)
+            //  checking the number 
+             {
                 return false;
             }
-            for (let index = 2; index < number; index++) {
-                if (number % index == 0) {
+            
+            for (let index = 2; index < number; index++) 
+            // generating for loop for number
+            {
+                if (number % index == 0) 
+                {
                     return false;
                 }
         
             }
             return true;
         },
+
+        // method for checking anagram 
         isAnagram(string1, string2) 
         {
             string1=string1+"";
@@ -50,6 +75,8 @@ module.exports = {
                   arr[index] = 0;
       
               }
+
+              // checking string 1 with integers asci values 
               for (let index = 0; index < string1.length; index++)
                {
                   var ch = string1.charAt(index);
@@ -67,6 +94,7 @@ module.exports = {
                       var code = ch.charCodeAt(0);
                       arr[code - 22]++;
                   }
+                  //  checking the string 2 values with integers asci values 
                   ch = string2.charAt(index);
                   if (ch >= 'a' && ch <= 'z')
                    {
@@ -86,6 +114,7 @@ module.exports = {
       
               }
               for (let index = 0; index < 36; index++) 
+              //  generating loop for arrays for boolean 
               {
                   if (arr[index] != 0) 
                   {

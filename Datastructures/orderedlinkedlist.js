@@ -1,13 +1,30 @@
-class node {
+/*****************************************************************************************
+ *purpose   : it wiil giving methods to perform orderlist
+
+ 
+ * @file    : orderedlinkedlist.js
+ * @overview: Reading methods for orderedlinkedlist file
+ * @author  : surendra 
+ * @version : 1.0
+ * @since   : 04/01/2019 
+ ***************************************************************************/
+// class for node 
+ class node {
     constructor(element) {
         this.element = element;
         this.next = null;
 
     }
 }
+
+// class for linked list
+
 class linkedList {
 
-    add(element) {
+
+    add(element)
+    // method for adding elements in node
+    {
 
         var n = new node(element);
 
@@ -24,17 +41,27 @@ class linkedList {
         t.next = n;
         return;
 
+ 
+    }   
 
-    }
 
-    inserstionfirst(element) {
+
+
+
+
+
+    // method for insertion an elements at first  in node
+
+    inserstionFirst(element) 
+    {
         var n = new Node(element);
         if (head == null) {
             this.head = n;
             this.size++;
             return;
-        }
-        else {
+    }
+        else 
+        {
             n.next = this.head;
             this.head = n;
             this.size++;
@@ -42,22 +69,34 @@ class linkedList {
         }
 
     }
-    inserst(element, index) {
-        if (index == 0) {
+
+
+
+
+
+    // method for inserstion an element at particular position in node
+    inserst(element, index)
+     {
+        if (index == 0) 
+        {
             this.inserstionfirst(element)
             return;
 
         }
-        if (this.head == null) {
+        if (this.head == null)
+         {
             return;
         }
-        else {
+        else 
+        {
             var n = new Node(element);
             var t = 0;
             var prev = this.head;
             var current = this.head;
-            while (current) {
-                if (t == index - 1) {
+            while (current)  
+            {
+                if (t == index - 1) 
+                {
                     prev.next = n;
                     n.next = current;
                     this.size++;
@@ -73,59 +112,25 @@ class linkedList {
         }
 
     }
-    deleteFirst() {
-        if (this.head = null) {
-            console.log("EMPTY LINKED LIST")
-        }
-        var n = this.head.element;
-        this.head = this.head.next;
-        this.size--;
-        return n;
+
+
+
+// method for deleting first element in  node 
+deleteFirst(){
+    if(this.head==null){
+        console.log("Linked List empty");
+        return;
     }
-    Pop() {
-        if (this.head == null) {
-            console.log("linked list is empty ");
-        }
-        if (this.head.next == null) {
-            return;
-        }
-        var current = this.head;
-        var prev = this.head;
-        while (this.head.next != null) {
-            prev = current;
-            current = cuirrent.next;
-        }
-        prev.next = null;
-        this.size--;
-        return current.next;
-
-    }
-    Popindex(index) {
-        if (index < 0) {
-            console.log(" enter correct index");
-            return false;
-        } else if (index == 1) {
-            this.deleteFirst();
-            return;
-        }
-        var current = this.head;
-        var prev = current;
-        var t = 0;
-        while (current) {
-            if (t == index - 1) {
-                prev.next = current.next;
-                this.size--;
-                return current.element;
-
-            }
-            t++;
-            prev = current;
-            current = current.next;
-        }
-        return null
+    var n=this.head.element;
+      this.head=this.head.next;
+      this.size--;
+      return n;
+}
 
 
-    }
+
+    // method for deleting elements in node
+  
     Remove(element) {
 
         var current = this.head;
@@ -147,6 +152,9 @@ class linkedList {
         }
         return null;
     }
+
+
+     //method for searching elements in node
     search(item) {
         if (this.head == null) {
             return false;
@@ -162,28 +170,21 @@ class linkedList {
         }
         return false;
     }
+
+
+    //checking whether the list is empty is or not
     isEmpty() {
         if (this.size == 0) {
             return true;
         }
         return false;
     }
+    // it will giving size of list 
     sizeoflist() {
         return this.size;
     }
 
-    displayQueue() {
-        var current = this.head;
-        var str = "";
-        while (current) {
-            str = str + current.element + " ";
-            if (current.next != null) {
-                str = str + " ";
-            }
-            current = current.next;
-        }
-        return str;
-    }
+   
     addAscending(){
         var main=this.head;
           var mainHead=null;

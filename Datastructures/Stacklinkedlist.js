@@ -1,3 +1,15 @@
+/*****************************************************************************************
+ *purpose   : it wiil giving methods to perform stacklinkelist methods
+
+ 
+ * @file    : stacklinkedlist.js
+ * @overview: Reading methods for unorderedlinkedlist file
+ * @author  : surendra 
+ * @version : 1.0
+ * @since   : 04/01/2019 
+ ***************************************************************************/
+
+ //node class for stack linked list
 class Node{
     
     constructor(element){
@@ -5,11 +17,18 @@ class Node{
         this.next=null;
     }
 }
+
+//seperate class for stackedlinked list
 class StackLinkedList{
   constructor(){
       this.size=0;
       this.head=null;
   }
+
+
+
+
+// method for adding elements in stack
   push(element){
         var n=new Node(element);
         if(this.head==null){
@@ -25,7 +44,11 @@ class StackLinkedList{
             current.next=n;
         }
         
+
   }
+
+
+  // method for removing elements from stack
   pop(){
     if(this.head==null){
         console.log("Stack underflow");
@@ -46,6 +69,9 @@ class StackLinkedList{
     this.size--;
     return curr.element;
 }
+
+
+// method for retreving elements in stack
 peek(){
     if(this.head==null){
         console.log("Stack underflow");
@@ -58,15 +84,25 @@ peek(){
     }
     return curr.element;
 }
+
+
+// method for checking whether elements is present or not
 isEmpty(){
     if(this.size==0){
         return true;
     }
     return false;
 }
+
+
+// method for returs the size of stack
 give_size(){
     return this.size;
 }
+
+
+
+// method for dispaying an elements in stack
 display(){
     var curr=this.head;
     var str="";
@@ -80,6 +116,9 @@ display(){
     console.log(str);
 }
 
+
+
+// method for revers an elements present in stack
 reveseStack(stk){
     var newstack=new StackLinkedList;
     var n=this.give_size();
@@ -89,6 +128,10 @@ reveseStack(stk){
     return newstack;
 
 }
+
+
+
+// method for displaying an anagram elements in stack
 
 displayAnagram(){
     var curr=this.head;
@@ -105,6 +148,10 @@ displayAnagram(){
 
 
 }
+
+
+
+// modules exporting
 module.exports={
     StackLinkedList
 }

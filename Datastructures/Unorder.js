@@ -12,8 +12,8 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access = require('./unorderlinkedlist');
-// accessing  a unorderedlinkedlist class through require keyword 
+var access = require('../Datastructures/Linkedlist');
+// accessing  a linkedlist class through require keyword 
 
 var filestream = require('fs');
 // picking a file through require keyword 
@@ -36,7 +36,7 @@ function unOrderlist() {
     for (let i = 0; i < array.length; i++)
      {
         unorder.add(array[i]);
-        // print the array
+        // adding an elements in array
     }
 
     unorder.show();
