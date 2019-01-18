@@ -1,10 +1,11 @@
 /*****************************************************************************************
- *purpose   :  prints the Calendar of the month.
+ *purpose   :   Create the Week Object having a list of WeekDay 
+                objects each storing the day (i.e S,M,T,W,Th,..) 
+               and the Date (1,2,3..) . 
  
- * @file    : Calenderqueue.js
+ * @file    : weekDay.js
  * @overview: Store the Calendar in an 2D Array, the first dimension the week of the month and the second dimension stores the day of the week. Print the result as following.
 
- 
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/

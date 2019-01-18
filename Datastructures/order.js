@@ -9,91 +9,52 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
+const utility = require('../Datastructures/utilityForDataStructures/Util');
+const readline = require('readline-sync');
+const list = require('../Datastructures/utilityForDataStructures/linkedlistorder');
 
+var ordedlist = () => {
 
-var access = require('../Datastructures/Linkedlist');
+    var read = utility.readfile1();//accessing file
 
+    console.log("Readfile : " + read);//printing that file
 
-// accessing  a orderedlinkedlist class through require keyword 
+    var st = read.split(' ');// spilting that given string by user
+    var list1 = new list.mylinklist;// accessing linked list
 
-var filestream = require('fs');
-// picking a file through require keyword 
-
-
-var readline = require('readline-sync');
-// accessing a readline through require keyword 
-
-
-var Util = require('../Datastructures/Util');
-// accessing a util class through require  keyword 
-
-
-function orderList() {
-    var string = filestream.readFileSync('file.txt', 'utf8');
-        // reading file from folder we created
-
-    var array = string.split(' ');
-    // spilting the given string
-
-
-    console.log(array);
-
-    var order = new access.linkedlist;
-    for (let i = 0; i < array.length; i++)
+    for (var i = 0; i < st.length; i++)// for loop for generating numbers
      {
-        order.add(Number(array[i]));
-        // adding an elements in array
+        list1.add(st[i]);// adding that elements
 
     }
-    
-    var answer = readline.question("Enter the number you want to search  :");
-   // user input
 
+    var filename = 'file1.txt';//accessing file
+    try {
+        var search = readline.question("Enter  number you want  to search ");// user have to input 
+        if (isNaN(search)) throw "Your input in not a number plz enter String  ";// validation for userinput
+        if (search == "") throw "your enter empty element ";// validation for userinput
 
-    if (!isNaN(answer))
-        // checking the string what you want to search
-
-     {
-       
-        if (order.search(answer))
-        //  check that entered element should be there or not  through if condition
+        if (list1.search(search))//search elements through if condition 
          {
-            order.remove(answer);
-                // checking the string what you want to search
 
+            list1.remove(search);// removing elements 
+            var data = list1.getdata();// getting elements
+            utility.Writefile(filename, data);//accessing file
+
+            list1.display();//displaying elements 
         }
-        else 
-        {
-            order.add(answer);
+        else {
+            list1.addInSequence2(search);//sorting elements 
+            list1.sort();//sorting elements
+            var data = list1.getdata();
+            utility.Writefile(filename, data);
 
-            //condition for if you enterd new string element were not presnt in thst folder 
-
-
-            //it will added in the entire string 
-
-
-            order.addAscending();
-
-
-
-            // method for sort an entered elements 
+            list1.display();
         }
     }
-    var number = order.getData();
-
-        // it will getting data throuh getdata method containing in linkedlist class
-
-    
-    Util.writeFile('file.txt', number);
-    console.log("Linked list elements are ");
-
-
-    order.show();
-
-
-    //it will display the data after performing all methods
-
-
-
+    catch (err) {
+        console.log("ERROR: " + err);// validation for userinput
     }
-orderList();
+
+}
+ordedlist();

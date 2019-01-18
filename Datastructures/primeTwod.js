@@ -10,15 +10,12 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access=require('../Datastructures/Primetwodchecker')
-//accessing the primetwodchecker through require keyword
- 
+var access=require('../Datastructures/utilityForDataStructures/Primetwodchecker')//accessing the primetwodchecker through require keyword
 
-// method for prime
+function prime()// method for prime
 
-function prime()
 {
-    //  accessing primenumber2d method 
-    access.primeNumber2D();
+   
+    access.primeNumber2D(); //  accessing primenumber2d method 
 }
 prime();

@@ -10,7 +10,7 @@
  ***************************************************************************/
 class node
 // class for node 
- {
+{
     constructor(element) {
         this.element = element;
         this.next = null;
@@ -46,8 +46,8 @@ class linkedlist {
         t.next = n;
         return;
 
- 
-    }   
+
+    }
 
 
 
@@ -57,16 +57,14 @@ class linkedlist {
 
     // method for insertion an elements at first  in node
 
-    inserstionFirst(element) 
-    {
+    inserstionFirst(element) {
         var n = new Node(element);
         if (head == null) {
             this.head = n;
             this.size++;
             return;
-    }
-        else 
-        {
+        }
+        else {
             n.next = this.head;
             this.head = n;
             this.size++;
@@ -80,28 +78,22 @@ class linkedlist {
 
 
     // method for inserstion an element at particular position in node
-    inserst(element, index)
-     {
-        if (index == 0) 
-        {
+    inserst(element, index) {
+        if (index == 0) {
             this.inserstionfirst(element)
             return;
 
         }
-        if (this.head == null)
-         {
+        if (this.head == null) {
             return;
         }
-        else 
-        {
+        else {
             var n = new Node(element);
             var t = 0;
             var prev = this.head;
             var current = this.head;
-            while (current)  
-            {
-                if (t == index - 1) 
-                {
+            while (current) {
+                if (t == index - 1) {
                     prev.next = n;
                     n.next = current;
                     this.size++;
@@ -123,38 +115,32 @@ class linkedlist {
 
 
     // method for deleting first element in  node 
-    deleteFirst() 
-    {
-        if(this.head==null)
-        {
+    deleteFirst() {
+        if (this.head == null) {
             console.log("Linked List empty");
             return;
         }
-        var n=this.head.element;
-          this.head=this.head.next;
-          this.size--;
-          return n;
+        var n = this.head.element;
+        this.head = this.head.next;
+        this.size--;
+        return n;
     }
 
 
 
 
 
-// method for deleting elements in node
-    remove(element) 
-    {
+    // method for deleting elements in node
+    remove(element) {
 
         var current = this.head;
-        if (current.element == element) 
-        {
+        if (current.element == element) {
             this.deleteFirst();
             return;
         }
         var prev = current;
-        while (current)
-         {
-            if (current.element == element)
-             {
+        while (current) {
+            if (current.element == element) {
                 prev.next = current.next;
                 this.size--;
                 return current.element;
@@ -172,18 +158,14 @@ class linkedlist {
 
 
     //method for searching elements in node
-    search(item)
-     {
-        if (this.head == null)
-         {
+    search(item) {
+        if (this.head == null) {
             return false;
         }
 
         var current = this.head;
-        while (current) 
-        {
-            if (current.element == item) 
-            {
+        while (current) {
+            if (current.element == item) {
                 return true;
             }
 
@@ -196,10 +178,8 @@ class linkedlist {
 
 
     //checking whether the list is empty is or not
-    isEmpty() 
-    {
-        if (this.size == 0)
-         {
+    isEmpty() {
+        if (this.size == 0) {
             return true;
         }
         return false;
@@ -207,111 +187,114 @@ class linkedlist {
 
 
     // it will giving size of list 
-    sizeOfList() 
-    {
+    sizeOfList() {
         return this.size;
     }
 
 
 
 
-// method for sorting for given elements in node 
-    addAscending()
-    {
-        var main=this.head;
-          var mainHead=null;
-        while(main)
-        {
-         var n=new node(main.element);
-         var flag=true;
-         if(mainHead==null)
-         {
-           
-             mainHead=n;
-          this.head=mainHead;
- 
-         }
-         else
-         
-         {
-             var prev=mainHead,current=mainHead;
-             if(current.next==null)
-             {
-                 if(n.element<current.element)
-                 {
-                     n.next=current;
-                     mainHead=n;
-                     flag=false;
-                 }
-             }
-             while(current&&flag)
-             {
-               if(n.element<current.element)
-               {
-                   prev.next=n;
-                   n.next=current;
-                   flag=false;
-               }
- 
-                 prev=current;
-                 current=current.next;
-             }
-             if(flag)
-             {
-                 prev.next=n;
-             }
-         }
-         
-            main=main.next;
- 
+    // method for sorting for given elements in node 
+    addAscending() {
+        var main = this.head;
+        var mainHead = null;
+        while (main) {
+            var n = new node(main.element);
+            var flag = true;
+            if (mainHead == null) {
+
+                mainHead = n;
+                this.head = mainHead;
+
+            }
+            else {
+                var prev = mainHead, current = mainHead;
+                if (current.next == null) {
+                    if (n.element < current.element) {
+                        n.next = current;
+                        mainHead = n;
+                        flag = false;
+                    }
+                }
+                while (current && flag) {
+                    if (n.element < current.element) {
+                        prev.next = n;
+                        n.next = current;
+                        flag = false;
+                    }
+
+                    prev = current;
+                    current = current.next;
+                }
+                if (flag) {
+                    prev.next = n;
+                }
+            }
+
+            main = main.next;
+
         }
-        return this.head=mainHead;
+        return this.head = mainHead;
     }
 
 
 
 
     // method for sorting an  elements in node
-    sort() 
-    {
-        do 
-        {
-            var swaping = 0;
-            var temp = this.head;
-            while (temp.next != null) 
-            {
-                if (parseInt(temp.next.data) < parseInt(temp.data)) 
-                {
-                    var n = temp.next.data;
-                    temp.next.data = temp.data;
-                    temp.data = n;
-                    swapped = 1;
+    sort() {
+        var main = this.head;
+        var mainHead = null;
+        while (main) {
+            var n = new node(main.element);
+            var flag = true;
+            if (mainHead == null) {
 
+                mainHead = n;
+                this.head = mainHead;
 
+            } else {
+                var pre = mainHead, curr = mainHead;
+                if (curr.next == null) {
+                    if (n.element < curr.element) {
+                        n.next = curr;
+                        mainHead = n;
+                        flag = false;
+                    }
                 }
-                temp = temp.next;
+                while (curr && flag) {
+                    if (n.element < curr.element) {
+                        pre.next = n;
+                        n.next = curr;
+                        flag = false;
+                    }
+
+                    pre = curr;
+                    curr = curr.next;
+                }
+                if (flag) {
+                    pre.next = n;
+                }
             }
+
+            main = main.next;
+
         }
-         while (swaping)
+        return this.head = mainHead;
     }
 
 
 
-
     // method for displaying an elements in node
-    show()
-     {
+    show() {
 
         var temp = this.head;
         var str = "";
-      
 
-        while (temp != null)
-         {
-            str = str + temp.element+" ";
-            if(temp.next!=null)
-            {
-            str=str+" ";
+
+        while (temp != null) {
+            str = str + temp.element + " ";
+            if (temp.next != null) {
+                str = str + " ";
             }
             temp = temp.next;
         }
@@ -325,16 +308,13 @@ class linkedlist {
 
 
     // method for getting data after the adding or removing an element in string
-    getData() 
-    {
+    getData() {
         var current = this.head;
         var str = "";
 
-        while (current) 
-        {
+        while (current) {
             str = str + current.element;
-            if (current.next != null)
-             {
+            if (current.next != null) {
                 str = str + " ";
             }
             current = current.next;
@@ -345,11 +325,11 @@ class linkedlist {
 
 
 }
-   
+
 
 
 // module exporting 
-module.exports = 
-{
-    linkedlist
-}
+module.exports =
+    {
+        linkedlist
+    }

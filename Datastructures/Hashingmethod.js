@@ -12,76 +12,38 @@
  ***************************************************************************/
 
 
-var access = require('../Datastructures/Linkedlist');
- //  accessing linkedlist through require keyword 
-
-
-var readline = require('readline-sync');
- //  accessing readline through require keyword
-
-var take = require('util');
-// printing take varaible through require keyword 
-
-
-var filestream = require('fs');
-// accessing file through require keyword 
-
-
-var utility = require('../Datastructures/Util');
-// accessing util class through require keyword 
-
-
-
-function hashing() 
-// method for hashing
-
+var access = require('../Datastructures/utilityForDataStructures/Linkedlist');//  accessing linkedlist through require keyword 
+var readline = require('readline-sync');//  accessing readline through require keyword
+var take = require('util');// printing take varaible through require keyword 
+var filestream = require('fs');// accessing file through require keyword 
+var utility = require('../Datastructures/Util');// accessing util class through require keyword 
+function hashing() // method for hashin
 {
 
+    var f = filestream.readFileSync('hashnumber.txt', 'utf8');// accessing file through require keyword 
+    var num = f.split(' ');//  elements in file were spilted
 
+    var arr = new Array(10);    // declaring arr varaible 
+    var remainder ;   // declaring remainder varaible 
 
-    var f = filestream.readFileSync('hashnumber.txt', 'utf8');
-// accessing file through require keyword 
-
-
-    var num = f.split(' ');
-//  elements in file were spilted
-
-
-    var arr = new Array(10); 
-    // declaring arr varaible 
-
-
-    var remainder ; 
-
-    // declaring remainder varaible 
-
-     var n;
-     // declaring n varaible 
-
-
-
-    for (let i = 0; i < num.length; i++) 
-    // loop for generating number given by user input
+     var n;  // declaring n varaible 
+  
+    for (let i = 0; i < num.length; i++)  // loop for generating number given by user input
     {
 
+   
+          n = Number(num[i]);  // assigning that number to n 
+         remainder = n % 10;// checking remainder
 
-        n = Number(num[i]);
 
-        // assigning that number to n 
-        remainder = n % 10;
 
-// checking remainder
-
-        if (arr[remainder] === undefined)  
-
-        // checking  remainder with undefined througgh if condition 
+        if (arr[remainder] === undefined)   // checking  remainder with undefined through if condition 
         
         {
-            arr[remainder] = new access.linkedlist ;
+            arr[remainder] = new access.linkedlist ; //acessing that remainder to linkedlist
+            
+            arr[remainder].add(n);// generated elements were added to that array 
 
-             //acessing that remainder to linkedlist
-            arr[remainder].add(n);
-// generated elements were added to that array 
 
         } else 
 
@@ -91,10 +53,7 @@ function hashing()
 
         }
     }
-
-//  eclaring string varaible for generated elements were concated
-    var str = "";
-
+    var str = "";//  declaring string varaible for generated elements were concated
 
     for (let index = 0; index < 10; index++)
     
@@ -102,8 +61,8 @@ function hashing()
         take.print(index + " elements    ");
         try 
         {
-            // method for displaying elements
-            arr[index].show();
+           
+            arr[index].show(); // method for displaying elements
 
         } catch (err) 
         
@@ -112,19 +71,16 @@ function hashing()
         }
 
     }
-    var number = readline.question(' Enter the number you want to search \n');
-    // user input to what you want to search
-    if (!isNaN(number))
-    // checking that input is number or not 
+    var number = readline.question(' Enter the number you want to search \n');// user input to what you want to search
+    
+    if (!isNaN(number))// checking that input is number or not 
+    
     
     {
         remainder = Number(number % 10);
 
         console.log(remainder);
-
-// printing remainder 
-        console.log(arr[1]);
-
+        console.log(arr[1]);// printing remainder 
 
         if (arr[remainder] === undefined)
          {
@@ -134,12 +90,10 @@ function hashing()
         //  checking that you entered to search an integer  present or not through  search method  nby if condition 
         if (arr[remainder].search(Number(number)))
         
-        
         {
             console.log("The number is found in file");
-            arr[remainder].remove(number);
-            // if number you entered is there it will deleted through remove method
-
+            arr[remainder].remove(number); // if number you entered is there it will deleted through remove method
+           
         } else
          {
             console.log("Number is not found in file");
@@ -152,11 +106,8 @@ function hashing()
         {
             flag = true;
 
-            take.print(index + " result elements ,   ");
-            // print that generated elements in present 
+            take.print(index + " result elements ,   ");  // print that generated elements in present      
             try 
-
-
             // 
             {
                 arr[index].show();
@@ -172,12 +123,10 @@ function hashing()
 
             }
 
-        } console.log(str);
+        } console.log(str);  // print that generated string 
 
-        // print that generated string  
-        utility.writeFile('hashingNumber.txt', str);
-         //  accessing the elements 
-
+        utility.writeFile('hashingNumber.txt', str); //  accessing the elements 
+    
         console.log("\n\n");
     } else {
         console.log("Wrong input ");

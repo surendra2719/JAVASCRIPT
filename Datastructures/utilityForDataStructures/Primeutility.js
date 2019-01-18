@@ -10,14 +10,14 @@
  ***************************************************************************/
 
 module.exports = {
-// method for checking prime or not
-isPrime(number) {
+
+isPrime(number)// method for checking prime or not
+ {
     if (number == 0 || number == 1) {
         return false;
     }
-
-    // for loop for number given by user it will iterating what the user given the input for printing 
-    for (let index = 2; index < number; index++)
+   
+    for (let index = 2; index < number; index++) // for loop for number given by user it will iterating what the user given the input for printing 
     
     {   // verifying that input divide by index or not
         if (number % index == 0) 
@@ -26,7 +26,7 @@ isPrime(number) {
             return false;
         }
 
-    }// it will not satisfying means return false
-    return true;
+    }
+    return true;// it will not satisfying means return false
 }
 }

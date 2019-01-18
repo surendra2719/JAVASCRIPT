@@ -12,76 +12,33 @@
 var readline = require('readline-sync');
 // accessing readline through require keyword 
 module.exports = {
-
-    // method for binarysearchtree
-
+  // method for binarysearchtree
     binarySearchTree(){ 
         try{ //validation
-    
         var number = readline.question("Enter the total number of test cases");
-
         // user have to give these test cases 
         if(isNaN(number)) throw "PLZ ENTER INTEGER VALUE";
-
-
-        var arr = [];
-
-
-        //  declaring empty array vbaraible 
+        var arr = []; //  declaring empty array vbaraible 
         console.log("Enter your integers");
-
-
         // user have to give integer 
-
         for (var i = 0; i < number; i++)
-
-
          // generating loop for array 
          {
-
             arr[i] = readline.question(' ');
-
-
-
         }
-
-        console.log(arr);
-
-             //  declaring first varaible 
-         var first;
-       
-
-              // declaring second varaible 
-
-         var second; 
-
-
-
-        for (var j = 0; j < arr.length; j++)
-
-             // generating for loop for integers
-
+        console.log(arr);  
+          
+         var first; //  declaring first varaible 
+         var second; // declaring second varaible
+        for (var j = 0; j < arr.length; j++)  // generating for loop for integers
          {
+            
              // formula for first varaible 
-
-            var first =  (this.factorial(2*Number(arr[j])));
-
-
-
-            // formula for second varaible 
-
-
-
+            var first =  (this.factorial(2*Number(arr[j])))
+            // formula for second varaible
             var second = Number((this.factorial(Number(arr[j]) + 1)) * (this.factorial(Number(arr[j]))));
-
-
            // declaring result varaible 
-
-
              var result = Math.floor((first / second));
-
-
-
              // printing the result value 
 
              console.log("The total number of Node required for "+arr[j]+" is "+result);
@@ -91,15 +48,12 @@ module.exports = {
     console.log("invalid :"+err);
     // validation
 }
-
     },
-
-// factorial method 
-    factorial(num) {
+    factorial(num) {// factorial method 
         if(num>0)
         {
-            // checking num
-        if (num == 0 || num == 1) {
+          
+        if (num == 0 || num == 1) {  // checking num
             return 1;
         }
         // formula for factorial 

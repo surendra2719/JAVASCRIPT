@@ -10,71 +10,39 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access=require('../Datastructures/Dequeue');
+var access = require('../Datastructures/utilityForDataStructures/Dequeue');// accessing  a dequeue class through require keyword 
 
-// accessing  a dequeue class through require keyword 
+var readline = require('readline-sync');// accessing  a radline through require keyword 
 
+function check()// method for pallindrom checking
+{
+    var take = new access.Dequeue; // accessing dequeue 
 
-var readline=require('readline-sync');
-// accessing  a radline through require keyword 
+    var string = readline.question("Enter the string  ");// taking user input string
 
+    if (!isNaN(string))// checking the input value as a string irrespective of integers
+    {
+        console.log("input should be in string form ");
+        return;
+    }
+    else {
 
-// method for pallindrom checking
-function check()
-{ 
-
-    var take=new access.Dequeue;
-    // accessing dequeue 
-
-    
-  var string=readline.question("Enter the string  ");
-
-
-  // taking user input string
-  
-  if (!isNaN(string))
+        var result = take.PalindromeChecker(string);// by pallindromechecker method we check the pallindrome string it is class present in dequeue
 
 
-  // checking the input value as a string irrespective of integers
-   {
-      console.log("input should be in string form ");
-      return;
-  }
-  else 
-  {
+        if (result == false) {
+            console.log("String is not an a Palindrome ");// checking with if condition that result which we get from pallindromechecker method 
+        }
 
-    var result=take.PalindromeChecker(string);
-    // by pallindromechecker method we check the pallindrome string it is class present in dequeue
+        else {
+            console.log("String is palindrome  ");
 
+        }
 
-    // checking with if condition that result which we get from pallindromechecker method 
-  if(result==false)
-  {
-      console.log("String is not an a Palindrome ");
-  }
-
-
-  else 
-  {
-
-
-
-      console.log("String is palindrome  ");
-
-
-  }
+    }
 
 
 }
-
-
-
-}
-
-
-
-
-
 
 
 check();

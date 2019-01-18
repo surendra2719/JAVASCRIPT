@@ -10,17 +10,14 @@
  * @since   : 04/01/2019 
  ***************************************************************************/
 
-// accessing the utility class  from utilityforprogram through require keyword
-var utility=require('../Datastructures/Utilityforprogram');
 
-// accessing the stacked linked list through require keyword
-var access=require('../Datastructures/Stacklinkedlist');
+var utility=require('../Datastructures/Utilityforprogram');// accessing the utility class  from utilityforprogram through require keyword
 
-// accessing for printing through take varaible
-var take=require('util');
+var access=require('../Datastructures/Stacklinkedlist');// accessing the stacked linked list through require keyword
 
-// method for reverse anagram
-function reverseAnagram()
+var take=require('util');// accessing for printing through take varaible
+
+function reverseAnagram()// method for reverse anagram
 {  
 
 

@@ -9,27 +9,10 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
-
-var access=require('../Datastructures/Primeanagram')
-
-
-
-
-
-
-//   primeAnag method 
-function primeAng()
-{
-
-   
-   access.primeAnag();
-
-
-   // accessing the prime anag method
-
-
+var access = require('../Datastructures/utilityForDataStructures/Primeanagram')// accessing primeanagram through require keyword
+function primeAng()//   primeAnag method 
+ {
+   access.primeAnag();// accessing the prime anag method prime
 
 }
 

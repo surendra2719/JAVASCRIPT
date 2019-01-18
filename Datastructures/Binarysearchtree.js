@@ -6,28 +6,11 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
-var access=require('../Datastructures/Binarysearch');
-
-
-
+var access = require('../Datastructures/utilityForDataStructures/Binarysearch');
 //accessing binarysearch class through require keyword 
-
-
-
-function binarysearch()
-
-
-// method for binarySearchTree
+function binarysearch()// method for binarySearchTree
 {
-
-
-
-    access.binarySearchTree();
-
-
-
-    // accessing binarysearchtree  from binary search 
+    access.binarySearchTree(); // accessing binarysearchtree  from binary search 
 }
+
 binarysearch();

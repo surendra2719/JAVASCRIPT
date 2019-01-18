@@ -14,11 +14,12 @@
 var readline = require('readline-sync');
 
 module.exports = {
-    leapYear(year) {
-        // ensure year is of four digit
+    leapYear(year)   // ensure year is of four digit
     
-            //condition for checking leap 
-            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    {
+    
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) //condition for checking leap 
+             {
                return true;
             }
             else{
@@ -37,18 +38,18 @@ module.exports = {
             
             
         },
-        // prime method for checking number is prime or not 
-        isPrime(number)
+      
+        isPrime(number)  // prime method for checking number is prime or not 
          {
-            if (number == 0 || number == 1)
-            //  checking the number 
-             {
+            if (number == 0 || number == 1)  //  checking the number 
+            {
+          
                 return false;
             }
             
-            for (let index = 2; index < number; index++) 
-            // generating for loop for number
+            for (let index = 2; index < number; index++) // generating for loop for number
             {
+            
                 if (number % index == 0) 
                 {
                     return false;
@@ -58,8 +59,8 @@ module.exports = {
             return true;
         },
 
-        // method for checking anagram 
-        isAnagram(string1, string2) 
+       
+        isAnagram(string1, string2)  // method for checking anagram 
         {
             string1=string1+"";
            string2=string2+"";
@@ -76,8 +77,8 @@ module.exports = {
       
               }
 
-              // checking string 1 with integers asci values 
-              for (let index = 0; index < string1.length; index++)
+            
+              for (let index = 0; index < string1.length; index++)  // checking string 1 with integers asci values 
                {
                   var ch = string1.charAt(index);
                   if (ch >= 'a' && ch <= 'z')
@@ -94,8 +95,8 @@ module.exports = {
                       var code = ch.charCodeAt(0);
                       arr[code - 22]++;
                   }
-                  //  checking the string 2 values with integers asci values 
-                  ch = string2.charAt(index);
+                 
+                  ch = string2.charAt(index); //  checking the string 2 values with integers asci values 
                   if (ch >= 'a' && ch <= 'z')
                    {
                       var code = ch.charCodeAt(0);
