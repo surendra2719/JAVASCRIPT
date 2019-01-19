@@ -3,7 +3,7 @@
  *purpose   : Read in Arithmetic Expression such as  BALANCED PARANTHESIS (),[],{}
 
  
- * @file    : Balancedpranthesis .js
+ * @file    : balancedParanthesis .js
  * @overview: Take an Arithmetic Expression such as balance paranthesis 
  *            where parentheses are used to order the performance of operations. 
  *            Ensure parentheses must appear in a balanced 

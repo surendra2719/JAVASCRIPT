@@ -1,16 +1,16 @@
 /*****************************************************************************************
  *purpose   :  prints the Calendar of the month.
  
- * @file    : Calenderqueue.js
+ * @file    : calenderQueue.js
  * @overview: Store the Calendar in an 2D Array, the first dimension the week of the month and the second dimension stores the day of the week. Print the result as following.
 
  
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access1 = require('../Datastructures/utilityForDataStructures/Queue');// accessing queue through require keyword 
+var access1 = require('../Datastructures/utilityForDataStructures/queue');// accessing queue through require keyword 
 
-var utility = require('../Datastructures/utilityForDataStructures/Utilityforprogram');//accessing utilityprogram through require keyword
+var utility = require('../Datastructures/utilityForDataStructures/utilityForProgram');//accessing utilityprogram through require keyword
 
 var take = require('util');// accessing for printing through take varaible
 
@@ -43,7 +43,6 @@ function calender()// method for calender
     for (var i = 1; i <= dates[month]; i++) //generating loop for dates
 
     {
-
         dateQue.enque(i);  // adding dates in queue
     }
 
@@ -64,7 +63,6 @@ function calender()// method for calender
 
         {
             take.print(" " + dateQue.deque() + "   ");
-
         }
 
         if (i > 9)    // check if condition for double digit value 
@@ -74,9 +72,9 @@ function calender()// method for calender
 
         if ((i + day) % 7 == 0)  // checking with if condition it will printed upto  7 week day
         {
-            // printing 
+         // printing 
 
-            console.log()
+        console.log()
 
         }
 

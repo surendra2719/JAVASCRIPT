@@ -2,7 +2,7 @@
  *purpose   : Acessing the  methods by through this dequeue claas for pallindrome program
 
   
- * @file    :Dequeue.js
+ * @file    :dequeue.js
  * @overview: By this class it will provinding methods for dequeue operation
 
  * @version : 1.0
@@ -149,7 +149,7 @@ class Dequeue {
 
 
     // method for pallindrome checker
-    PalindromeChecker(str) {
+    palindromeChecker(str) {
         for (let i = 0; i < str.length; i++)
         // for loop for string 
         {

@@ -3,7 +3,7 @@
 
 
  
- * @file    : Unorder.js
+ * @file    :unOrder.js
  * @overview: read the Text from a file, split it into words and arrange it as Linked List. 
  *            Take a user input to search a Word in the List. If the Word is not found then add it to the list, and 
  *            if it found then remove the word from the List. In the end save the list into a file
@@ -12,7 +12,7 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access = require('../Datastructures/utilityForDataStructures/Linkedlist');// accessing  a linkedlist class through require keyword 
+var access = require('../Datastructures/utilityForDataStructures/linkedList');// accessing  a linkedlist class through require keyword 
 
 
 var filestream = require('fs');// picking a file through require keyword 
@@ -23,13 +23,13 @@ var readline = require('readline-sync');// accessing a readline through require 
 
 var Util = require('../Datastructures/Util');// accessing a util class through require  keyword 
 
-function unOrderlist() {
+function unOrderList() {
     var string = filestream.readFileSync('text.txt', 'utf8'); // reading file from folder we created
 
 
     var array = string.split(' ');// spilting the given string
 
-    var unorder = new access.linkedlist; // acesseing the linkedlist class file
+    var unorder = new access.linkedList; // acesseing the linkedlist class file
 
     for (let i = 0; i < array.length; i++) {
         unorder.add(array[i]); // adding an elements in array
@@ -66,4 +66,4 @@ function unOrderlist() {
 }
 
 
-unOrderlist();
+unOrderList();

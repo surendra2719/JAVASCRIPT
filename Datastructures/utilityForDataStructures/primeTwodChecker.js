@@ -2,15 +2,12 @@
  *purpose   : it wiil providing method accessing for primetwod program
 
  
- * @file    : Primetwodchecker.js
+ * @file    : primeTwodChecker.js
  * @overview: Reading methods for primetwod
  * @author  : surendra 
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
-
 var utility = require('../utilityForDataStructures/Primeutility');// accessing prime utility class through require keyword
 var req = require('util')// accessing for printing through req varaible ;
 module.exports =// modules exporting for prime twod  

@@ -2,8 +2,8 @@
  *purpose   : it wiil giving methods to perform unorderlist
 
  
- * @file    : Unorderlinkedlist.js
- * @overview: Reading methods for unorderedlinkedlist file
+ * @file    : linkedList.js
+ * @overview: Reading methods for orderedlinkedlist file
  * @author  : surendra 
  * @version : 1.0
  * @since   : 04/01/2019 
@@ -19,13 +19,7 @@ class node
 }
 // class for linked list
 
-
-
-
-
-
-
-class linkedlist {
+class linkedList {
 
     add(element)
     // method for adding elements in node
@@ -331,5 +325,5 @@ class linkedlist {
 // module exporting 
 module.exports =
     {
-        linkedlist
+        linkedList
     }

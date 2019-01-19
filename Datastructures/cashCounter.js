@@ -5,14 +5,14 @@
               and maintain the cash balance
 
  
- * @file    : Bank.js
+ * @file    : cashCounter.js
  * @overview:  Create a Program which creates Banking Cash Counter where people come in to deposit Cash and withdraw Cash.
                Have an input panel to add people to Queue to either deposit or withdraw money 
                and dequeue the people. Maintain the Cash Balance. 
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access = require('../Datastructures/utilityForDataStructures/Queue');// accessing  a queue class through require keyword 
+var access = require('../Datastructures/utilityForDataStructures/queue');// accessing  a queue class through require keyword 
 
 var readline = require('readline-sync');// accessing  a readline through require keyword 
 

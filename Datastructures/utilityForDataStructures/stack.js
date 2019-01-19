@@ -3,19 +3,12 @@
  *purpose   : Acessing the  methods by through this stack claas for balanced paranthesis program
 
  
- * @file    : Balancedpranthesis .js
+ * @file    : stack.js
  * @overview: By this class it will provinding methods for stack operation
 
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
-
-
-
- 
-
 class Stack {
     constructor() {
         this.stk = [];

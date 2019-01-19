@@ -1,3 +1,13 @@
+/*****************************************************************************************
+ *purpose   : it wiil giving methods to perform stacklinkelist methods
+
+ 
+ * @file    :linkListOrder.js
+ * @overview: Reading methods for orderedlinkedlist file
+ * @author  : surendra 
+ * @version : 1.0
+ * @since   : 04/01/2019 
+ ***************************************************************************/
 class Node {
     /**
      * 
@@ -8,10 +18,10 @@ class Node {
         this.data = data;
         this.next = null;
     }
-}
-class mylinklist {
+}//
+class mylinklist {// linkedlist class
 
-    add(data) {
+    add(data) {// adding of elements
 
         var n = new Node(data);
 
@@ -31,7 +41,7 @@ class mylinklist {
         return;
 
     }
-    display() {
+    display() {// dispalying of elements
         var t = this.head;
         var show = "";
 
@@ -40,21 +50,17 @@ class mylinklist {
 
             show = show + t.data;
             if (t.next != null) {
-                show =show + " ";
+                show = show + " ";
             }
             t = t.next;
         }
         console.log(show);
     }
-    search(element) {
+    search(element) {//displaying of elements
         var temp = this.head;
         // console.log("remove");
         while (temp != null) {
-            // console.log(element+"== "+ temp.data);
-            // console.log(element==temp.data.trim());
 
-            // console.log('element: '+ typeof(element)+' ' + temp.data);
-            // console.log('tempdata '+typeof(temp.data)+' ' +element);
             if (element == temp.data.trim()) {
 
                 return true;
@@ -63,7 +69,7 @@ class mylinklist {
         }
         return false;
     }
-    remove(element) {
+    remove(element) {//removing elements
         var temp = this.head;
         var prev = this.head;
         //console.log(temp.data);
@@ -80,7 +86,7 @@ class mylinklist {
         prev.next = temp.next;
         return;
     }
-    getdata() {
+    getdata() {//reteriving data
         var t = this.head;
         var disp = "";
 
@@ -96,9 +102,8 @@ class mylinklist {
         }
         return disp;
     }
-    sort() {
-        //console.log("sorted enter ");
-        //  var temp2 = null;
+    sort() {//sorting elements
+
         do {
             var swapped = 0;
             var t = this.head;

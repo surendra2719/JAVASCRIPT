@@ -33,24 +33,24 @@ module.exports = {
 		let data = file.readFileSync(filename, 'utf8');//reading file
 		data = data.split(' ');// spilting that string given by userinput 
 		return data;
-    },
+	},
 	readfile()//accessing file
-	 {
-        var f=readf.readFileSync('file.txt','utf8');
-           return f;
-       },//accessing file
-       readfile1() {
-           var f=readf.readFileSync('file1.txt','utf8');
-              return f;
-		  },
-		  
-	   Writefile(filename,data)//accessing file
-	   {
-   
-   readf.writeFile(filename,data,(err)=>{
-   
-       if(err) throw err;
-       
-   })
-       },
+	{
+		var f = readf.readFileSync('file.txt', 'utf8');
+		return f;
+	},//accessing file
+	readfile1() {
+		var f = readf.readFileSync('file1.txt', 'utf8');
+		return f;
+	},
+
+	Writefile(filename, data)//accessing file
+	{
+
+		readf.writeFile(filename, data, (err) => {
+
+			if (err) throw err;
+
+		})
+	},
 }

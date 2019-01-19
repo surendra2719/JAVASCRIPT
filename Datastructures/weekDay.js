@@ -9,9 +9,9 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-var access1 = require('../Datastructures/utilityForDataStructures/Queue');// accessing queue through require keyword 
+var access1 = require('../Datastructures/utilityForDataStructures/queue');// accessing queue through require keyword 
 
-var utility = require('../Datastructures/utilityForDataStructures/Utilityforprogram');//accessing utilityprogram through require keyword
+var utility = require('../Datastructures/utilityForDataStructures/utilityForProgram');//accessing utilityprogram through require keyword
 
 var take = require('util');// accessing for printing through take varaible
 
