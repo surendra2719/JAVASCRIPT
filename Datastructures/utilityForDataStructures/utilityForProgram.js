@@ -32,11 +32,6 @@ module.exports = {
 
 
     },
-
-
-
-
-
     isPrime(number)  // prime method for checking number is prime or not 
     {
         if (number == 0 || number == 1)  //  checking the number 
@@ -52,7 +47,6 @@ module.exports = {
         }
         return true;
     },
-
 
     isAnagram(string1, string2)  // method for checking anagram 
     {

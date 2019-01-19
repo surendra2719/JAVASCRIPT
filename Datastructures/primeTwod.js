@@ -11,11 +11,8 @@
  * @since   : 04/01/2019 
  ***************************************************************************/
 var access = require('./utilityForDataStructures/primeTwodChecker')//accessing the primetwodchecker through require keyword
-
 function prime()// method for prime
-
 {
-
     access.primeNumber2D(); //  accessing primenumber2d method 
 }
 prime();

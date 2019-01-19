@@ -34,17 +34,13 @@ function calender()// method for calender
     {
         dates[2] = 29;
     }
-
     for (var i = 0; i < week.length; i++) // loop for generating week 
     {
-
         dayQue.enque(week[i]); // adding week  in queue
     }
 
     for (var i = 1; i <= dates[month]; i++) //generating loop for dates
-
     {
-
         dateQue.enque(i);  // adding dates in queue
     }
 
@@ -62,27 +58,21 @@ function calender()// method for calender
     for (var i = 1; i <= dates[month]; i++)  // generating loop for print single values and double values 
     {
         if (i < 10) // checking if condition for single digit values less than 10 
-
         {
             take.print(" " + dateQue.deque() + "   ");
 
         }
-
         if (i > 9)    // check if condition for double digit value 
         {
             take.print("" + i + "   ")
         }
-
         if ((i + day) % 7 == 0)  // checking with if condition it will printed upto  7 week day
         {
             // printing 
 
             console.log()
-
         }
-
     }
-
     console.log("\n\n");
 }
 calender();

@@ -20,7 +20,7 @@ class Stack {
         this.capacity = capacity;
         var stk = new stk[capacity];
     }
-    push(ele) {
+    push(ele) {// method for adding 
 
         if (this.top == this.capacity - 1) {
             console.log("Stack Overflow");
@@ -30,7 +30,7 @@ class Stack {
         this.stk[++this.top] = ele;
 
     }
-    pop() {
+    pop() {// method for deleting
         if (this.top == -1) {
             console.log("Stack underFlow");
             return;
@@ -38,18 +38,18 @@ class Stack {
         this.size--;
         return this.stk[this.top--];
     }
-    peek() {
+    peek() {// meth
         if (this.top == -1) {
             console.log("No elements Found");
             return;
         }
         console.log(this.stk[this.top]);
     }
-    getSize() {
+    getSize() {// method for reteriving size
         return this.size;
     }
 
-    isEmpty() {
+    isEmpty() {// method for checking stack is empty or not
         if (this.top == -1) {
             console.log("Stack is empty");
             return;
@@ -57,7 +57,7 @@ class Stack {
         console.log("Stack is not empty");
     }
 
-    dispaly() {
+    dispaly() { // method for dispalying elements 
         var string = "";
         for (let i = 0; i <= this.top; i++) {
             string = string + this.stk[i];
@@ -67,7 +67,7 @@ class Stack {
         }
         console.log(string);
     }
-    reveseStack(stk) {
+    reveseStack(stk) {//method for reversing stack
         var newstack = new Stack;
         var n = this.getsize();
         for (let index = 0; index < n; index++) {

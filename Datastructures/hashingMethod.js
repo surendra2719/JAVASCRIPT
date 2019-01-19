@@ -10,8 +10,6 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
 var access = require('../Datastructures/utilityForDataStructures/linkedList');//  accessing linkedlist through require keyword 
 var readline = require('readline-sync');//  accessing readline through require keyword
 var take = require('util');// printing take varaible through require keyword 
@@ -22,10 +20,8 @@ function hashing() // method for hashin
 
     var f = filestream.readFileSync('hashnumber.txt', 'utf8');// accessing file through require keyword 
     var num = f.split(' ');//  elements in file were spilted
-
     var arr = new Array(10);    // declaring arr varaible 
     var remainder ;   // declaring remainder varaible 
-
      var n;  // declaring n varaible 
   
     for (let i = 0; i < num.length; i++)  // loop for generating number given by user input
@@ -34,12 +30,10 @@ function hashing() // method for hashin
          remainder = n % 10;// checking remainder
 
         if (arr[remainder] === undefined)   // checking  remainder with undefined through if condition 
-        
         {
             arr[remainder] = new access.linkedlist ; //acessing that remainder to linkedlist
             
             arr[remainder].add(n);// generated elements were added to that array 
-
         } else 
         {
             arr[remainder].add(n);
@@ -47,8 +41,7 @@ function hashing() // method for hashin
     }
     var str = "";//  declaring string varaible for generated elements were concated
 
-    for (let index = 0; index < 10; index++)
-    
+    for (let index = 0; index < 10; index++) 
     {
         take.print(index + " elements    ");
         try 
@@ -59,22 +52,17 @@ function hashing() // method for hashin
         {
             console.log("empty index");
         }
-
     }
-    var number = readline.question(' Enter the number you want to search \n');// user input to what you want to search
-    
+    var number = readline.question(' Enter the number you want to search \n');// user input to what you want to search 
     if (!isNaN(number))// checking that input is number or not 
     {
         remainder = Number(number % 10);
-
         console.log(remainder);
         console.log(arr[1]);// printing remainder 
-
         if (arr[remainder] === undefined)
          {
             arr[remainder] = new access.linkedlist ;
         }
-
         //  checking that you entered to search an integer  present or not through  search method  nby if condition 
         if (arr[remainder].search(Number(number)))
         {

@@ -12,28 +12,21 @@
 const utility = require('../Datastructures/utilityForDataStructures/util');
 const readline = require('readline-sync');
 const list = require('../Datastructures/utilityForDataStructures/linkListOrder');
-
 var ordedList = () => {
-
     var read = utility.readfile1();//accessing file
-
     console.log("Readfile : " + read);//printing that file
-
     var st = read.split(' ');// spilting that given string by user
     var list1 = new list.mylinklist;// accessing linked list
-
     for (var i = 0; i < st.length; i++)// for loop for generating numbers
     {
         list1.add(st[i]);// adding that elements
 
     }
-
     var filename = 'file1.txt';//accessing file
     try {
         var search = readline.question("Enter  number you want  to search ");// user have to input 
         if (isNaN(search)) throw "Your input in not a number plz enter String  ";// validation for userinput
         if (search == "") throw "your enter empty element ";// validation for userinput
-
         if (list1.search(search))//search elements through if condition 
         {
 
@@ -48,13 +41,11 @@ var ordedList = () => {
             list1.sort();//sorting elements
             var data = list1.getdata();
             utility.Writefile(filename, data);
-
             list1.display();
         }
     }
     catch (err) {
         console.log("ERROR: " + err);// validation for userinput
     }
-
 }
 ordedList();

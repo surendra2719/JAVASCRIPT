@@ -30,7 +30,6 @@ class mylinklist {// linkedlist class
             this.cap++;
             return;
         }
-
         var t = this.head;
         while (t.next != null) {
 
@@ -46,8 +45,6 @@ class mylinklist {// linkedlist class
         var show = "";
 
         while (t != null) {
-
-
             show = show + t.data;
             if (t.next != null) {
                 show = show + " ";
@@ -62,7 +59,6 @@ class mylinklist {// linkedlist class
         while (temp != null) {
 
             if (element == temp.data.trim()) {
-
                 return true;
             }
             temp = temp.next;
@@ -82,7 +78,6 @@ class mylinklist {// linkedlist class
             prev = temp;
             temp = temp.next;
         }
-
         prev.next = temp.next;
         return;
     }
@@ -94,8 +89,7 @@ class mylinklist {// linkedlist class
         while (t != null) {
             disp = disp + t.data;
             if (t != null) {
-
-                disp = disp + " ";
+              disp = disp + " ";
             }
 
             t = t.next;
@@ -110,7 +104,6 @@ class mylinklist {// linkedlist class
             while (t.next != null) {
 
                 if (parseInt(t.next.data) < parseInt(t.data)) {
-
                     var neww = t.next.data;
                     t.next.data = t.data;
                     t.data = neww;
@@ -138,7 +131,6 @@ class mylinklist {// linkedlist class
 
             while (current.next != null && current.next.data < item)
                 current = current.next;
-
             node.next = current.next;
             current.next = node;
         }

@@ -38,7 +38,6 @@ module.exports =// modules exporting for prime twod
                     else  //  condition for if condition where no  satisfying for that values  
 
                     {
-
                         j = 1;// again j value  reintialized to 1 
 
 
