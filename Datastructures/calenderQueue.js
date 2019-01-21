@@ -57,9 +57,9 @@ function calender()// method for calender
         }
         if ((i + day) % 7 == 0)  // checking with if condition it will printed upto  7 week day
         {
-         // printing 
+            // printing 
 
-        console.log()
+            console.log()
 
         }
     }

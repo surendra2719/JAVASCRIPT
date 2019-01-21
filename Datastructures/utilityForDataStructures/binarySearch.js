@@ -7,8 +7,6 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
 var readline = require('readline-sync');
 // accessing readline through require keyword 
 module.exports = {
@@ -32,7 +30,6 @@ module.exports = {
             var second; // declaring second varaible
             for (var j = 0; j < arr.length; j++)  // generating for loop for integers
             {
-
                 // formula for first varaible 
                 var first = (this.factorial(2 * Number(arr[j])))
                 // formula for second varaible

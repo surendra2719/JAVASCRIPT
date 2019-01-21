@@ -2,7 +2,7 @@
  *purpose   : it wiil giving methods to perform  methods
 
  
- * @file    :Util.js
+ * @file    :util.js
  * @overview: Reading methods for files 
  * @author  : surendra 
  * @version : 1.0

@@ -31,6 +31,6 @@ function check()// method for pallindrom checking
             console.log("String is palindrome  ");
 
         }
- }
+    }
 }
 check();

@@ -1,7 +1,5 @@
 /*****************************************************************************************
  *purpose   : it wiil providing method accessing for primetwod program
-
- 
  * @file    : primeTwodChecker.js
  * @overview: Reading methods for primetwod
  * @author  : surendra 
@@ -11,17 +9,12 @@
 var utility = require('../utilityForDataStructures/Primeutility');// accessing prime utility class through require keyword
 var req = require('util')// accessing for printing through req varaible ;
 module.exports =// modules exporting for prime twod  
-
     {
-
         primeNumber2D()  // method for primetwod
         {
             var array = [["[0-100  ], ["], ["[100-200], [ "], ["[200-300], [ "],
             ["[300-400], [ "], ["[400-500], ["], ["[500-600], ["],// declaring an array with range of values
             ["[600-700], ["], ["[700-800], [ "], ["[800-900], ["], ["[900-1000], ["]];
-
-
-
             var i = 0; // declaring i vraible starts from  0 th index
             var j = 1;  // declaring j vraible starts from 1 th index
             var range = 100; // declaring intially 100
@@ -39,12 +32,9 @@ module.exports =// modules exporting for prime twod
 
                     {
                         j = 1;// again j value  reintialized to 1 
-
-
                         // now range it will starts from another range by adding 100 to that range
                         range = range + 100;
                         i++;
-
                     }
                 }
                 console.log("The prime numbers are presents in the given range :\n"); // loops for printing the generated prime numbers in two dimensional array

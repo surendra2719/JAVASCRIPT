@@ -24,7 +24,6 @@ class linkedList {
     add(element)
     // method for adding elements in node
     {
-
         var n = new node(element);
 
         if (this.head == null) {
@@ -93,7 +92,6 @@ class linkedList {
                     this.size++;
                     return;
                 }
-
                 t++;
                 prev = current;
                 current = current.next;
@@ -138,7 +136,6 @@ class linkedList {
                 prev.next = current.next;
                 this.size--;
                 return current.element;
-
             }
 
             prev = current;
@@ -199,7 +196,6 @@ class linkedList {
 
                 mainHead = n;
                 this.head = mainHead;
-
             }
             else {
                 var prev = mainHead, current = mainHead;
@@ -216,7 +212,6 @@ class linkedList {
                         n.next = current;
                         flag = false;
                     }
-
                     prev = current;
                     current = current.next;
                 }
@@ -224,9 +219,7 @@ class linkedList {
                     prev.next = n;
                 }
             }
-
             main = main.next;
-
         }
         return this.head = mainHead;
     }
@@ -242,10 +235,8 @@ class linkedList {
             var n = new node(main.element);
             var flag = true;
             if (mainHead == null) {
-
                 mainHead = n;
                 this.head = mainHead;
-
             } else {
                 var pre = mainHead, curr = mainHead;
                 if (curr.next == null) {
@@ -261,7 +252,6 @@ class linkedList {
                         n.next = curr;
                         flag = false;
                     }
-
                     pre = curr;
                     curr = curr.next;
                 }
@@ -269,9 +259,7 @@ class linkedList {
                     pre.next = n;
                 }
             }
-
             main = main.next;
-
         }
         return this.head = mainHead;
     }
@@ -283,8 +271,6 @@ class linkedList {
 
         var temp = this.head;
         var str = "";
-
-
         while (temp != null) {
             str = str + temp.element + " ";
             if (temp.next != null) {
@@ -293,9 +279,6 @@ class linkedList {
             temp = temp.next;
         }
         console.log(str);
-
-
-
     }
 
 
@@ -305,7 +288,6 @@ class linkedList {
     getData() {
         var current = this.head;
         var str = "";
-
         while (current) {
             str = str + current.element;
             if (current.next != null) {
@@ -315,13 +297,7 @@ class linkedList {
         }
         return str;
     }
-
-
-
 }
-
-
-
 // module exporting 
 module.exports =
     {

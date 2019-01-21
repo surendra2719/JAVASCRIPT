@@ -8,8 +8,6 @@
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
-
 // class for dequeue
 class Dequeue {
     constructor() {

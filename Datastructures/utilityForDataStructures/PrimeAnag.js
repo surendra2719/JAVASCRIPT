@@ -1,7 +1,5 @@
 /*****************************************************************************************
  *purpose   : it wiil providing method accessing for prime angaram  program through linked list 
-
- 
  * @file    : PrimeAnag.js
  * @overview: Reading methods for prime anagram through linked lilst 
  * @author  : surendra 
@@ -16,15 +14,9 @@ var req = require('util');
 // accessing prime utility class through require keyword
 module.exports = {
     // modules exporting for prime twod  
-    primeAnag() {
-
-        // modules exporting for primeangram 
-
-        var arr = [];
-        // declaring an empty array
-
+    primeAnag() {  // modules exporting for primeangram 
+        var arr = [];  // declaring an empty array
         var array = [["[0-1000] "]]; // declaring an array with range of values
-
         for (let i = 2; i < 1000; i++) // generating for loop for iterating upto 1000 numbers for prime numbers
         {
             if (utility.isPrime(i)) // checking that generating prime with isprime method through if condition
@@ -34,7 +26,6 @@ module.exports = {
         }
         var range = 1000,    // declaring intially 100
         var k = 0;// declaring k varaible
-
         for (let i = 0; i < arr.length; i++) // loops for printing the generated prime numbers in two dimensional array
         {
             for (let j = i + 1; j < arr.length; j++) {
@@ -44,7 +35,6 @@ module.exports = {
 
                     {
                         if (arr[j] <= range) {
-
                             array[k].push(arr[i]);  // pushing  that generated elements in array
                             array[k].push(arr[j]);
                         }
@@ -62,11 +52,9 @@ module.exports = {
             }
         }
         console.log("The Number which are prime and anagram ");
-
         for (let i = 0; i < array.length; i++)// loops for printing for that generated elements 
         {
-
-         for (let j = 0; j < array[i].length; j++) {
+            for (let j = 0; j < array[i].length; j++) {
                 req.print(array[i][j] + " ");
                 if (j == 0) {
                     req.print(" ");

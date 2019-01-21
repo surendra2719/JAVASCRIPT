@@ -1,7 +1,5 @@
 /*****************************************************************************************
  *purpose   : it wiil giving methods to perform stacklinkelist methods
-
- 
  * @file    :linkListOrder.js
  * @overview: Reading methods for orderedlinkedlist file
  * @author  : surendra 
@@ -22,9 +20,7 @@ class Node {
 class mylinklist {// linkedlist class
 
     add(data) {// adding of elements
-
         var n = new Node(data);
-
         if (this.head == null) {
             this.head = n;
             this.cap++;
@@ -84,8 +80,6 @@ class mylinklist {// linkedlist class
     getdata() {//reteriving data
         var t = this.head;
         var disp = "";
-
-
         while (t != null) {
             disp = disp + t.data;
             if (t != null) {
@@ -128,7 +122,6 @@ class mylinklist {// linkedlist class
 
             /* Locate the node before point of insertion. */
             current = this.head;
-
             while (current.next != null && current.next.data < item)
                 current = current.next;
             node.next = current.next;

@@ -12,5 +12,4 @@ function binarysearch()// method for binarySearchTree
 {
     access.binarySearchTree(); // accessing binarysearchtree  from binary search 
 }
-
 binarysearch();

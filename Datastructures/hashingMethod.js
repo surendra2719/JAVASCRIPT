@@ -20,36 +20,32 @@ function hashing() // method for hashin
 
     var f = filestream.readFileSync('hashnumber.txt', 'utf8');// accessing file through require keyword 
     var num = f.split(' ');//  elements in file were spilted
-    var arr = new Array(10);    // declaring arr varaible 
-    var remainder ;   // declaring remainder varaible 
-     var n;  // declaring n varaible 
-  
+    var arr = new Array(10); // declaring arr varaible 
+    var remainder;   // declaring remainder varaible 
+    var n;  // declaring n varaible 
+
     for (let i = 0; i < num.length; i++)  // loop for generating number given by user input
     {
-          n = Number(num[i]);  // assigning that number to n 
-         remainder = n % 10;// checking remainder
+        n = Number(num[i]);  // assigning that number to n 
+        remainder = n % 10;// checking remainder
 
         if (arr[remainder] === undefined)   // checking  remainder with undefined through if condition 
         {
-            arr[remainder] = new access.linkedlist ; //acessing that remainder to linkedlist
-            
+            arr[remainder] = new access.linkedList; //acessing that remainder to linkedlist
+
             arr[remainder].add(n);// generated elements were added to that array 
-        } else 
-        {
+        } else {
             arr[remainder].add(n);
         }
     }
     var str = "";//  declaring string varaible for generated elements were concated
 
-    for (let index = 0; index < 10; index++) 
-    {
+    for (let index = 0; index < 10; index++) {
         take.print(index + " elements    ");
-        try 
-        {
+        try {
             arr[index].show(); // method for displaying elements
 
-        } catch (err) 
-        {
+        } catch (err) {
             console.log("empty index");
         }
     }
@@ -59,46 +55,40 @@ function hashing() // method for hashin
         remainder = Number(number % 10);
         console.log(remainder);
         console.log(arr[1]);// printing remainder 
-        if (arr[remainder] === undefined)
-         {
-            arr[remainder] = new access.linkedlist ;
+        if (arr[remainder] === undefined) {
+            arr[remainder] = new access.linkedlist;
         }
         //  checking that you entered to search an integer  present or not through  search method  nby if condition 
-        if (arr[remainder].search(Number(number)))
-        {
+        if (arr[remainder].search(Number(number))) {
             console.log("The number is found in file");
             arr[remainder].remove(number); // if number you entered is there it will deleted through remove method
-           
-        } else
-         {
+
+        } else {
             console.log("Number is not found in file");
             arr[remainder].add(number);
             // checking with conidition if number is not there it will inserted through add method 
         }
         var flag;
-        for (let index = 0; index < 10; index++) 
-        {
+        for (let index = 0; index < 10; index++) {
             flag = true;
             take.print(index + " result elements ,   ");  // print that generated elements in present      
-            try 
+            try
             // 
             {
                 arr[index].show();
                 str = str + arr[index].getData();
-                if (arr[index] !== 'undefined' && index < arr.length - 2)
-                {
+                if (arr[index] !== 'undefined' && index < arr.length - 2) {
                     str = str + " ";
                 }
-            } catch (err)
-             {
-                 // if array of index is not equal it will cocated and not satisfying that cndtn it will displat empty index
+            } catch (err) {
+                // if array of index is not equal it will cocated and not satisfying that cndtn it will displat empty index
                 console.log("Empty index");
             }
 
         } console.log(str);  // print that generated string 
 
         utility.writeFile('hashingNumber.txt', str); //  accessing the elements 
-    
+
         console.log("\n\n");
     } else {
         console.log("Wrong input ");

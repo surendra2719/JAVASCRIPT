@@ -25,7 +25,7 @@ function unOrderList() {
     }
     unorder.show(); // for displaying that array we have given data
     var answer = readline.question("Enter the word  you want to search  :\n");// checking the string what you want to search
-     if (!isNaN(answer)) {
+    if (!isNaN(answer)) {
         console.log("input should be in string form ");  // checking the input value as a string irrespective of integers
         return;
     }

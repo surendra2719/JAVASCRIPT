@@ -781,7 +781,7 @@ module.exports = {
             var number = readline.question("your number is in the range of " + middle + " to " + right + " ");
             // loop contains if your number is in between it will assigned to middle  else it will goes to else loop
             if (number == "y") {
-                middle = this.findnumber(middle , right);
+                middle = this.findnumber(middle, right);
             }
             else if (number == "n") {
                 middle = this.findnumber(left, middle - 1);
@@ -802,7 +802,7 @@ module.exports = {
 
     random() {
         var value = Math.floor(Math.random() * 3);
-        console.log(value+1);
+        console.log(value + 1);
         return value;
     },
     // it will print empty  after playinig the game user and computer
@@ -838,8 +838,8 @@ module.exports = {
         var flag = false;
         while (flag == false) {
             console.log("Enter the row value:");
-            let x = readline.questionInt('Enter the value of x within 1,2,3')-1;
-            let y = readline.questionInt('Enter the value of y within 1,2,3')-1;
+            let x = readline.questionInt('Enter the value of x within 1,2,3') - 1;
+            let y = readline.questionInt('Enter the value of y within 1,2,3') - 1;
             if (game[x][y] == '-') {
                 this.mark(game, x, y, 'X');
                 flag = true;

@@ -1,16 +1,12 @@
 /*****************************************************************************************
  *purpose   : it wiil providing method accessing for primetwod program
-
- 
  * @file    : primeEnque.js
  * @overview: Reading methods for primetwod
  * @author  : surendra 
  * @version : 1.0
  * @since   : 04/01/2019 
  ***************************************************************************/
-
 var req = require('util');
-
 // accessing utility 
 var utility = require('../utilityForDataStructures/Primeutility');
 module.exports = {
@@ -19,13 +15,10 @@ module.exports = {
     {
         var array = [["0-1000 "], ["100-200  "], ["200-300 "], ["300-400 "], ["400-500 "], ["500-600 "], ["600-700 "], ["700-800 "], ["800-900 "], ["900-1000 "]];
         // varaible declaration
-        var i = 0; var j = 1; var range = 100;
-        // varaible declaration
-        for (let prime = 2; prime <= 1000; prime++)
-        // generating loop for prime
+        var i = 0; var j = 1; var range = 100;        // varaible declaration
+        for (let prime = 2; prime <= 1000; prime++)   // generating loop for prime   
         {
             if (utility.isPrime(prime))  //  checking with isPrime method through if condition 
-
             {
                 if (prime <= range) //checking range that generated prime through if condition 
                 {

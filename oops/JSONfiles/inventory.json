@@ -1,0 +1,53 @@
+{
+    "rice": [
+        {
+            "riceName": "Jasmine",
+            "weight": "50",
+            "price": "150"
+        },
+        {
+            "riceName": "Basmati",
+            "weight": "40",
+            "price": "100"
+        },
+        {
+            "riceName": "Arborio",
+            "weight": "30",
+            "price": "120"
+        }
+    ],
+    "wheat": [
+        {
+            "wheatName": "Emmer",
+            "weight": "40",
+            "price": "80"
+        },
+        {
+            "wheatName": "Macaroni",
+            "weight": "20",
+            "price": "100"
+        },
+        {
+            "wheatName": "Ashirwad",
+            "weight": "50",
+            "price": "110"
+        }
+    ],
+    "pulses": [
+        {
+            "pulseName": "lentil",
+            "weight": "10",
+            "price": "90"
+        },
+        {
+            "pulseName": "Mung",
+            "weight": "15",
+            "price": "85"
+        },
+        {
+            "pulseName": "Adzuki",
+            "weight": "20",
+            "price": "70"
+        }
+    ]
+}

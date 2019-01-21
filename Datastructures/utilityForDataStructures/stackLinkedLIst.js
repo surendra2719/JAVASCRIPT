@@ -2,7 +2,7 @@
  *purpose   : it wiil giving methods to perform stacklinkelist methods
 
  
- * @file    : stacklinkedlist.js
+ * @file    :stackLinkedLIst.js
  * @overview: Reading methods for unorderedlinkedlist file
  * @author  : surendra 
  * @version : 1.0
