@@ -102,8 +102,19 @@ module.exports = {
             }
         }
         return true;
+    },
+    insertion(res) {
+        for (let i = 1; i < res.length; i++) {
+            var point = res[i];
+            var j = i - 1;
+            while (j >= 0 && res[j] > point) {
+                res[j + 1] = res[j];
+                j = j - 1;
+            }
+            res[j + 1] = point;
+        }
+        return res;
     }
-
 
 
 }

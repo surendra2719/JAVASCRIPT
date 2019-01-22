@@ -19,6 +19,9 @@ var content = filestream.readFileSync('../oops/JSONfiles/stock.json');
  * content redaing content from JSON files  
  */
 var data = JSON.parse(content);
+/**
+ * JSON.parse it converts contents in JSON files to javaScript object
+ */
 function stock() {
     /**
     * accessing the stockExpression method from util

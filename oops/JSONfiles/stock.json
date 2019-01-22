@@ -1,24 +1,26 @@
+
 {
-    "stock": [
-        {
-            "stock_name": "Bridge Lab",
-            "Number_of_shares": "50",
-            "share_price": "10000"
-        },
-        {
-            "stock_name": "Accenture",
-            "Number_of_shares": "75",
-            "share_price": "6500"
-        },
-        {
-            "stock_name": "Infosys",
-            "Number_of_shares": "97",
-            "share_price": "7600"
-        },
-        {
-            "stock_name": "huawei",
-            "Number_of_shares": "80",
-            "share_price": "9500"
-        }
-    ]
+    "stock"  : [{
+               "stock_Name"       : "Bridge Lab",
+               "number_Of_Shares" : "50",
+               "share_Price"      : "10000"
+               }, 
+
+               {
+                "stock_Name"      : "Accenture",
+                "number_Of_Shares": "75",
+                "share_Price"     : "6500"
+               },
+
+               {
+                "stock_Name"      : "Infosys",
+                "number_Of_Shares": "97",
+                "share_Price"     : "7600"
+               },
+
+               {
+                "stock_Name"      : "huawei",
+                "number_Of_Shares": "80",
+                "share_Price"     : "9500"
+               }]
 }
