@@ -309,10 +309,10 @@ module.exports = {// modules exporting
         /**
          * spilting the four persons cards in containig array
          */
-        array = personOne.getData().split(' ');
-        array2 = personTwo.getData().split(' ');
-        array3 = personThree.getData().split(' ');
-        array4 = personFour.getData().split(' ');
+        arrayOne = personOne.getData().split(' ');
+        arrayTwo = personTwo.getData().split(' ');
+        arrayThree = personThree.getData().split(' ');
+        arrayFour = personFour.getData().split(' ');
         /**
          * sorting the cards by insertion sorting through symbols containig in array
          */
@@ -384,7 +384,166 @@ module.exports = {// modules exporting
         console.log(arr);
 
     },
+    clinicManagement(data) {
+        /**
+         * accessing data of doctor and patient from JSON file through declaring varaibles
+         */
+        var doctor = data.Doctor;
+        var patient = data.Patient;
+        /**
+         * declaring answer varaible for user input choice
+         */
+        var answer = Number(readline.question("Press 1 to search doctor \n and press 2 to search patient"));
+        {
+            if (answer == 1) {
+                let information = readline.question("Press \n 1. to search doctor by his name \n 2. by ID ,\n 3.by Specialization ");
+                if (information == 1) {
+                    try {
+                        var doctorName = readline.question("Enter the name of doctor ");
+                        if (isNaN = doctorName) throw "invalid input please enter data correctly containing in doctors list"
+                    }
+                    catch (err) {
+                        console.log(err)
+                    }
+                    /**
+                     * taking input by user 
+                     * generating for in loop and checking through if condition
+                     * printing the result 
+                     */
+                    for (var key in doctor) {
+                        if (doctor[key].name == doctorName) {
+                            console.log("your doctor information");
+                            console.log(doctor[key]);
+                        }
+                    }
+                    this.appointment();
+                }
+                else if (information == 2) {
+                    try {
+                        var doctorIdNumber = readline.question("Enter the ID of doctor ");
+                        if (isNaN = doctorIdNumber) throw "invalid input please enter data correctly containing in doctors list"
+                    }
+                    catch (err) {
+                        console.log(err)
+                    }   /**
+                    * taking input by user 
+                    * generating for in loop and checking through if condition
+                    * printing the result 
+                    */
+                    for (var key in doctor) {
+                        if (doctor[key].Id == doctorIdNumber) {
+                            console.log("your doctor information");
+                            console.log(doctor[key]);
+                        }
+                    }
+                    this.appointment();
+                }
+                else if (information == 3) {
+                    try {
+                        var doctorSpecilization = readline.question("Enter the Specialization of doctor ");
+                        if (isNaN = doctorSpecilization) throw "invalid input please enter data correctly containing in doctors list"
+                    }
+                    catch (err) {
+                        console.log(err)
+                    }   /**
+                    * taking input by user 
+                    * generating for in loop and checking through if condition
+                    * printing the result 
+                    */
+                    for (var key in doctor) {
+                        if (doctor[key].Specialization == doctorSpecilization) {
+                            console.log("your doctor information");
+                            console.log(doctor[key]);
+                        }
+                    }
+                    this.appointment();
+                }
+                else {
+                    console.log("Enter valid input");
+                    this.clinicManagement(data);
+                }
+            }
+            else if (answer == 2) {
+                let information = readline.question("Press \n 1. to search patient by his name \n 2. by ID ,\n 3.by Mobile number ");
+                if (information == 1) {
+                    try {
+                        var patientName = readline.question("Enter the name of Patient ");
+                        if (isNaN = patientName) throw "invalid input please enter data correctly containing in patients list"
+                    }
+                    catch (err) {
+                        console.log(err)
+                    }   /**
+                    * taking input by user 
+                    * generating for in loop and checking through if condition
+                    * printing the result 
+                    */
+                    for (var key in patient) {
+                        if (patient[key].name == patientName) {
+                            console.log("your Patient information");
+                            console.log(patient[key]);
+                        }
+                    }
+                }
+                else if (information == 2) {
+                    try {
+                        var patientIdNo = readline.question("Enter the Id of Patient ");
+                        if (isNaN = patientIdNo) throw "invalid input please enter data correctly containing in patients list"
+                    }
+                    catch (err) {
 
+                        console.log(err)
+                    }   /**
+                    * taking input by user 
+                    * generating for in loop and checking through if condition
+                    * printing the result 
+                    */
+                    for (var key in patient) {
+                        if (patient[key].Id == patientIdNo) {
+                            console.log("your Patient information");
+                            console.log(patient[key]);
+                        }
+                    }
+                }
+                else if (information == 3) {
+                    try {
+                        var patientMobileNumber = readline.question("Enter the mobile number of Patient ");
+                        if (isNaN = patientMobileNumber) throw "invalid input please enter data correctly containing in patients list"
+                    }
+                    catch (err) {
+
+                        console.log(err)
+                    }   /**
+                    * taking input by user 
+                    * generating for in loop and checking through if condition
+                    * printing the result 
+                    */
+                    for (var key in patient) {
+                        if (patient[key].Contact_number == patientMobileNumber) {
+                            console.log("your Patient information");
+                            console.log(patient[key]);
+                        }
+                    }
+                }
+                /**
+                 * validating
+                 */
+                else if (inf == 4) {
+                    return;
+                }
+                else {
+                    console.log("Enter the valid input")
+                }
+            }
+            else {
+                console.log("Enter valid input")
+            }
+        }
+
+    },
+    appointment(data, doctor) {
+
+    },
+    
 }
 
 

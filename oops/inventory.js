@@ -1,11 +1,9 @@
 /*****************************************************************************************
  *purpose   : Read in JSON File and create a JSON file having Inventory Details for Rice, Pulses and Wheats 
               with properties name, weight, price per kg. 
-
  * @file    : inventory.js
  * @overview: Get JSON Object in Java or NSDictionary in iOS. Create Inventory Object from JSON. 
               Calculate the value for every Inventory. 
-
  * @author  : surendra 
  * @version : 1.0
  * @since   : 04/01/2019 

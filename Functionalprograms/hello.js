@@ -11,8 +11,16 @@
 const Utility= require('../Utility/utility');
 var readline = require('readline-sync');
 function replace()
-       {
+       {    try{
               var read=readline.question("enter your name");
+              if(!isNaN(read)) throw "invalid"
               Utility.replace(read);
+       }
+       
+       catch (err)
+       {
+              console.log(err)
+       }
+          
        }
 replace();
