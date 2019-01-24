@@ -323,7 +323,7 @@ module.exports = {// modules exporting
         /**
          * printing the result containing in array
          */
-        console.log("Player 1 have this cards :  " + arrayOne.join());
+        console.log("Player 1 have this cards :  " + arrayOne.join())
         console.log("Player 2 have this cards :  " + arrayTwo.join());
         console.log("Player 3 have this cards :  " + arrayThree.join());
         console.log("Player 4 have this cards :  " + arrayFour.join());
@@ -334,20 +334,13 @@ module.exports = {// modules exporting
                     and Print the Cards the received by the 4 Players using 2D Array
     */
     deck2D() {
-        /**
-        * accessing the queue  from there respective path
-        */
-        var queue = require('../Datastructures/utilityForDataStructures/queue');
-        /**
-        * declaring varaibles and accessing queue
-        */
-        var queue = new queue.Queue;
+     
         var suit = ["♣️", "🔸", "❤️", "♠️"];
         var rank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
         /**
         * declaring array and calculating the number of cards and pushing into array
         */
-        var deck = new Array();
+        var deck = [];
         var n = suit.length * rank.length;
         /**
        * declaring array and calculating the number of cards and pushing into array
@@ -543,7 +536,9 @@ module.exports = {// modules exporting
     appointment(data, doctor) {
 
     },
-    
+ 
+
 }
+
 
 

@@ -1,0 +1,24 @@
+{
+    "Person": [
+        {
+            "Name": "Surendra",
+            "LastName": "kumar",
+            "Address": {
+                "City": "Guntur",
+                "State": "AP",
+                "Zip": "522306",
+                "PhoneNum": "8179882719"
+            }
+        },
+        {
+            "Name": "HIthesh",
+            "LastName": "Gowda",
+            "Address": {
+                "City": "Hassan",
+                "State": "Karnataka",
+                "Zip": "402010",
+                "PhoneNum": "9834512789"
+            }
+        }
+    ]
+}
