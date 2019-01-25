@@ -16,6 +16,6 @@ function stock() {
     /**
      * accessing the stock method from util
      */
-    utility.Stock();
+    utility.stock();
 }
 stock()

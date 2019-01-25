@@ -1,1 +1,34 @@
-{"Person":[{"Name":"HIthesh","LastName":"Gowda","Address":{"City":"Hassan","State":"Karnataka","Zip":"402010","PhoneNum":"9834512789"}},{"Name":"Royal","LastName":"Royal","Address":{"City":"Tenali","State":"AP","Zip":"522201","PhoneNum":"8919329484"}},{"Name":"Surendra","LastName":"kumar","Address":{"City":"Guntur","State":"AP","Zip":"522306","PhoneNum":"8179882719"}}]}
+{
+    "Person": [
+        {
+            "Name": "Hithesh",
+            "LastName": "Gowda",
+            "Address": {
+                "City": "Tenali",
+                "State": "Karnataka",
+                "Zip": "573201",
+                "PhoneNum": "9020103040"
+            }
+        },
+        {
+            "Name": "Divya",
+            "LastName": "Janani",
+            "Address": {
+                "City": "Bangalore",
+                "State": "Karnataka",
+                "Zip": "560060",
+                "PhoneNum": "7020103050"
+            }
+        },
+        {
+            "Name": "Praju",
+            "LastName": "Gowda",
+            "Address": {
+                "City": "Hassan",
+                "State": "Karnataka",
+                "Zip": "402010",
+                "PhoneNum": "9010407080"
+            }
+        }
+    ]
+}
