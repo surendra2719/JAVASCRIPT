@@ -30,17 +30,21 @@ class Address {
         this.addressData;
     }
     createAddress() {
-        var name = prompt("Please enter your first name: ");
+        var name =prompt("Please enter your first name: ");
         if (nameRestriction.test(name) == false) {
             console.log("Invalid input");
+            this.createAddress()
             return false;
+       
         }
+   
         var lastName = prompt("Please enter your last name: ");
         /**
          * validating last name
          */
         if (nameRestriction.test(lastName) == false) {
             console.log("Invalid input");
+            this.createAddress()
             return false;
         }
         /**
@@ -50,11 +54,13 @@ class Address {
         var city = prompt("City: ");
         if (nameRestriction.test(city) == false) {
             console.log("Invalid city name");
+            this.createAddress()
             return false;
         }
         var state = prompt("State: ");
         if (nameRestriction.test(state) == false) {
             console.log("Invalid state name");
+            this.createAddress()
             return false;
         }
 
@@ -65,11 +71,13 @@ class Address {
          */
         if (contactRestriction.test(zip) == false || zip.lenght <= 6) {
             console.log("Invalid zip code");
+            this.createAddress()
             return false;
         }
         var phoneNumber = prompt("Phone number: ");
         if (contactRestriction.test(phoneNumber) == false || phoneNumber.length != 10) {
             console.log("Invalid phone number");
+            this.createAddress()
             return false;
         }
         /**
@@ -79,10 +87,8 @@ class Address {
             "Name": name,
             "LastName": lastName,
             "Address": {
-
                 "City": city,
                 "State": state,
-
                 "Zip": zip,
                 "PhoneNum": phoneNumber
             }
@@ -93,7 +99,8 @@ class Address {
         fs.writeFile('addressBook1.json', JSON.stringify(addressData), 'utf-8', function (err) {
             if (err) throw err
             console.log('Done!');
-        })
+        })       
+         this.createAddress()
         console.log("Address updated ");
         console.log("Your information as per our record is: \r\n First Name: " + name + "\r\nLast Name: " + lastName + "\r\nCity: " + city + "\r\nState: " + state);
     }
@@ -146,12 +153,22 @@ class Address {
                             console.log("3: Zip code");
                             console.log("4: Phone");
                             console.log("5: Exit");
+                            
                             var choice3 = prompt("Please enter your choice: ");
+                            try {
+                                if(isNaN(update)) throw "invalid"
+                                }
+                                catch (err)
+                                {
+                                    console.log(err)
+                                }
+                        
                             switch (parseInt(choice3)) {
                                 case 1:
                                     var cityUpdate = prompt("Enter the new city name: ");
                                     if (nameRestriction.test(cityUpdate) == false && cityUpdate.length > 3) {
                                         console.log("Invalid name!");
+                                        this.openProfile()
                                         return false;
                                     }
                                     var obj = {
@@ -171,6 +188,7 @@ class Address {
                                     var statetUpdate = prompt("Enter the new state name: ");
                                     if (nameRestriction.test(statetUpdate) == false && statetUpdate.length > 3) {
                                         console.log("Invalid name!");
+                                        this.openProfile()
                                         return false;
                                     }
                                     var obj = {
@@ -191,6 +209,7 @@ class Address {
                                     var zipUpdate = prompt("Enter the new zip code: ");
                                     if (contactRestriction.test(zipUpdate) == false) {
                                         console.log("Invalid number!");
+                                        this.openProfile()
                                         return false;
                                     }
                                     var obj = {
@@ -210,6 +229,7 @@ class Address {
                                     var phoneNumbewrUpdate = prompt("Enter the new phone number: ");
                                     if (contactRestriction.test(phoneNumbewrUpdate) == false || phoneNumbewrUpdate.length != 10) {
                                         console.log("Invalid number!");
+                                        this.openProfile()
                                         return false;
                                     }
                                     var obj = {
@@ -236,12 +256,18 @@ class Address {
                              * to delete profile
                              */
                             var update = prompt(" enter index  want to delete: ");
-                            delete addressData.Person[update];
+                            if(update!=isNaN){
+                             console.log("invalid input ")
+                            this.openProfile()
+                            }
+                        
+                                 delete addressData.Person[update];
                             for (var k = 0; k < addressData.Person.length; k++) {
                                 if (addressData.Person[k] == null) {
                                     addressData.Person.splice(k, 1);
                                 }
                             }
+                        
                             /**
                              * write file
                              */
@@ -275,6 +301,7 @@ class Address {
                             break;
                         default:
                             console.log(" enter valid input");
+                            this.openProfile()
                             break;
                     }
                 }
@@ -283,11 +310,13 @@ class Address {
                  * check if name is available in json or not
                  */
                 console.log("Profile unavailable!!Please create new one.");
+                this.openProfile()
                 //address();
             }
         }
         else {
             console.log("No database to display and create a new database");
+            this.openProfile()
             this.createAddress();
         }
     }
@@ -301,6 +330,7 @@ function addressBook() {
     console.log("1:Create database");
     console.log("2:Open Address Book");
     console.log("3:Exit");
+   
     var choice1 = prompt("enter your choice: ");
     switch (parseInt(choice1)) {
         case 1:
@@ -314,6 +344,9 @@ function addressBook() {
             break;
         default:
             console.log(" enter valid input ");
+            addressBook()
+            
     }
+  
 }
 addressBook()

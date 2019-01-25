@@ -334,7 +334,7 @@ module.exports = {// modules exporting
                     and Print the Cards the received by the 4 Players using 2D Array
     */
     deck2D() {
-     
+
         var suit = ["♣️", "🔸", "❤️", "♠️"];
         var rank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
         /**
@@ -536,9 +536,269 @@ module.exports = {// modules exporting
     appointment(data, doctor) {
 
     },
- 
+    stock() {
 
+        var read = require('readline-sync');
+        /**
+         * {}-new object 
+         */
+        var module = {};
+        /**
+         * if it already exists use its value else use the new object.
+         */
+        module.StackNode = function () {
+            this.item = null;
+            this.next = null;
+        }
+        module.LinkedStack = function () {
+            var head = null;
+            var size = null;
+            /**
+             * Push function:
+             * Iterate through the list and then add the node to the last node in the list
+             */
+            this.pushToStack = function (item) {
+                var node = new module.StackNode();
+                node.item = item;
+                node.next = null;
+                if (size < 1 && head === null) {
+                    head = node;
+                    head.next = null;
+                    size = 1;
+                }
+                else {
+                    var current = head;
+                    while (current.next !== null) {
+                        current = current.next;
+                    }
+                    current.next = node;
+                    size += 1;
+                }
+            }
+            /**
+             * Pop Function:
+             * To get the last item and remove it from the list
+             */
+            this.popFromStack = function () {
+                var current = head;
+                if (size === 0) {
+                    return;
+                }
+                if (size === 1) {
+                    head = null;
+                    size = 0;
+                    return current;
+                }
+                var prev = current;
+                while (current.next !== null) {
+                    prev = current;
+                    current = current.next;
+                }
+                prev.next = null;
+                size -= 1;
+                console.log(current);
+                return current;
+            }
+            /**
+             * Function to check if stack is empty
+             */
+            this.isStackEmpty = function () {
+                return (size < 1) ? true : false;
+            }
+            /**
+             * Function to get top item of the stack
+             */
+            this.stackTop = function () {
+                var current = head;
+                if (size > 0 && head !== null) {
+                    while (current.next !== null) {
+                        current = current.next;
+                    }
+                    return current.item;
+                }
+                else {
+                    console.log("There is no item in the stack");
+                    return null;
+                }
+            }
+            /**
+             * printing stack elements
+             */
+            this.printStack = function () {
+                var current = head;
+                while (current.next !== null) {
+                    //console.log("Item "+current.item + " is on the stack.");
+                    console.log(current.item);
+                    current = current.next;
+                }
+                //console.log("Item "+current.item + " is on the stack.");
+                console.log(current.item);
+            }
+        }
+
+        class Comapany {
+            constructor(totalPrice) {
+                this.totalPrice = 1;
+            }
+            /**
+             * buy()-adding new object to the json file
+             */
+            buy(numberOne) {
+                for (var i = 0; i < numberOne; i++) {
+                    /**
+                     * asking user to enter the input
+                     */
+                    console.log();
+                    var name = read.question("Enter of item you want to purchase : ");
+                    var number = read.question("Enter the number of items you want to purchase: ");
+                    var price = read.question("Enter the price of item you want to purchase :  ");
+                    /**
+                     * customer is object
+                     */
+                    var customer =
+                    {
+                        name: name,
+                        number: number,
+                        price: price
+                    }
+                    stack.pushToStack(customer);
+                    totalPrice = parseInt(number) * parseInt(price);
+                    console.log("The total cost of " + name + " is :" + totalPrice);
+                    /**
+                     * from Date()function getting hrs,min,sec
+                     */
+                    var date = new Date();
+                    var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                    console.log("The purchase time is " + time);
+                }
+            }
+            /**
+             * sell()-subtracting object from the json
+             */
+            sell() {
+                var numberTwo = read.question("\nEnter number of elements you want to sell: ");
+                for (var j = 0; j < numberTwo; j++) {
+                    stack.popFromStack();
+                }
+                var date = new Date();
+                var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                console.log("The item is sold at " + time);
+            }
+            accountReport() {
+                console.log('The total items purchased are :');
+                stack.printStack();
+            }
+        }
+     
+        var read = require('readline-sync');
+        var stack = new module.LinkedStack();
+        var c = new Comapany();
+        var totalPrice = 1;
+        var numberThree = read.question(" enter the total number of stocks you want to purchased: ");
+        c.buy(numberThree);
+        c.accountReport();
+        c.sell();
+    },
+      companyShares()
+      {
+        const linked = require('../Datastructures/stockLinkedList');
+var list = new linked.linkedList;
+var fs = require('fs');
+var read = require('readline-sync');
+var element = fs.readFileSync('/home/bridgelabz/surendra/oops/JSONfiles/companyShare.json');
+var companyData = JSON.parse(element);
+for (var key in companyData.company) {
+    list.add(companyData.company[key]);
 }
-
+function Stocklinkedlist() {
+    console.log('\n1.Add Data \n2.Remove Data \n3.Save \n4.Display \n5.Exit');
+    /*
+    * enter choices to select 
+    */
+    var choice = read.question('Enter your choice :');
+    /**
+     * This choice Add the data into the file
+     */
+    if (choice == 1) {
+        var name = read.question('Enter company name :');
+        var PerShare = read.question('Enter per share price :');
+        var total = read.question('Enter total number of shares :');
+        var v = {
+            symbol: name,
+            pricePerShare: PerShare,
+            totalShare: total
+        }
+        list.add(v);
+        console.log('Company added successfully');
+        Stocklinkedlist();
+    }
+    /**
+     * This remove Add the data into the file
+     */
+    else if (choice == 2) {
+        var array = [];
+        array = list.printList1();
+        console.log(array);
+        var curr = list.head;
+        var deleteCompany = read.question('Enter the company you want to delete :');
+        let n = 0;
+        var flag = true;
+        while (curr && flag) {
+            n++;
+            if (curr.data.symbol === deleteCompany) {
+                console.log('curr :', curr.data.symbol);
+                list.popIndex(n);
+                flag = false;
+            }
+            curr = curr.next;
+        }
+        if (flag) {
+            console.log('Index not found');
+        }
+        console.log('UPDATED LIST');
+        var array = [];
+        array = list.printList1();
+        console.log(array);
+        Stocklinkedlist();
+    }
+    /**
+     * This choice save the data and data is stored into the file
+     */
+    else if (choice == 3) {
+        var outputarray = [];
+        outputarray = list.printList1();
+        console.log('Output Array is :');
+        console.log(outputarray);
+        var b = { "company": outputarray }
+        fs.writeFileSync('/home/bridgelabz/surendra/oops/JSONfiles/companyShare.json', JSON.stringify(b), 'utf-8', function () {
+            console.log('done')
+        });
+        console.log('Data saved to file');
+        Stocklinkedlist();
+    }
+    /**
+     * This choice display the data in file
+     */
+    else if (choice == 4) {
+        var array = [];
+        array = list.printList1();
+        console.log(array);
+        Stocklinkedlist();
+    }
+    /**
+     * This choice will exit from operation
+     */
+    else if (choice == 5) {
+        console.log("Thank You!");
+        process.exit();
+    }
+    else {
+        console.log('Invalid choice ..Try Again.');
+        Stocklinkedlist();
+    }
+}
+Stocklinkedlist();
+}
+}
 
 

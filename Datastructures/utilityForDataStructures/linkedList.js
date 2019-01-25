@@ -44,6 +44,15 @@ class linkedList {
 
 
 
+    printList1() {
+        var curr = this.head;
+        var str = [];
+        while (curr) {
+            str.push(curr.data);
+            curr = curr.next;
+        }
+        return str;
+    }
 
 
 
